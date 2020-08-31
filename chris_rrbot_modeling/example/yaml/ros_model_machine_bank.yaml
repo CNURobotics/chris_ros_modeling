@@ -1,0 +1,22 @@
+!MachineBank
+names_to_metamodels:
+  XX.XX.XX.157: !Machine
+    hostname: XX.XX.XX.157
+    ip_address: XX.XX.XX.157
+    name: XX.XX.XX.157
+    node_names: !!set
+      /robot_state_publisher: null
+      /rrbot/controller_spawner: null
+      /rrbot_control_action_19653_1598754066562: null
+      /rrbot_rqt: null
+    source: ros_snapshot
+    version: 0
+  XX.XX.XX.216: !Machine
+    hostname: XX.XX.XX.216
+    ip_address: XX.XX.XX.216
+    name: XX.XX.XX.216
+    node_names: !!set
+      /gazebo: null
+      /gazebo_gui: null
+    source: ros_snapshot
+    version: 0

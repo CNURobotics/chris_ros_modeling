@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>chris_rrbot_modeling</name>
+  <version>0.0.0</version>
+  <description>RRBot with action controller for chris_ros_modeling demo</description>
+
+  <maintainer email="robotics@cnu.edu">David Conner</maintainer>
+  <author email="robotics@cnu.edu">David Conner</author> -->
+  <license>BSD</license>
+  <url type="website">http://wiki.ros.org/chris_ros_modeling</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>catkin</exec_depend>
+  <exec_depend>chris_ros_modeling</exec_depend>
+  <exec_depend>rrbot_gazebo</exec_depend>
+  <exec_depend>rrbot_description</exec_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

@@ -1,0 +1,6 @@
+output/*
+*.pyc
+.idea
+docs/*
+.vscode
+yaml_output/*

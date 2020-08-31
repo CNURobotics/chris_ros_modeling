@@ -1,0 +1,18 @@
+#! /usr/bin/env python
+# Software License Agreement (BSD License)
+#Copyright (c) 2020
+#Capable Humanitarian Robotics and Intelligent Systems Lab (CHRISLab)
+#Christopher Newport University
+#
+#All rights reserved.
+#
+# Released under BSD license; see associated LICENSE file for details
+
+
+import sys
+
+from chris_ros_modeling import model_loader
+
+if __name__ == '__main__':
+
+    model_loader.main(sys.argv)

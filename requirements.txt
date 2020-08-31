@@ -1,0 +1,4 @@
+# CHRIS ROS Modeling
+# NOTE: Python apt module may require sudo apt install python-apt
+graphviz ~= 0.14
+PyYAML ~= 5.3

@@ -1,0 +1,16 @@
+rrbot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers ---------------------------------------
+  position_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - joint1
+      - joint2
+    gains:
+      # Gains were barely tweaked to work on melodic
+      joint1: {p: 750.0, i: 0.01, d: 10.0}
+      joint2: {p: 375.0, i: 0.01, d: 10.0}
