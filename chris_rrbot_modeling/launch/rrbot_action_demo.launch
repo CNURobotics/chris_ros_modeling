@@ -1,0 +1,6 @@
+<launch>
+
+  <!-- Basic launch file -->
+  <node name="rrbot_action_demo" pkg="chris_rrbot_modeling" type="rrbot_action_demo" respawn="false" output="screen" />
+
+</launch>

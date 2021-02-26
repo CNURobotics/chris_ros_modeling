@@ -9,11 +9,17 @@ The captured model can be loaded, manipulated, and exported for documentation or
 in so called Model Integrated Computing (MIC) or Model Driven Engineering (MDE).
 
 This repository includes the following packages:
-* `chris_ros_modeling`    - ROS Entity metamodel classes and tools for marshalling/unmarshalling instances
-                         of these metamodels (model)
-* `chris_package_modeler` - tool to capture specification model of existing ROS workspace
-* `chris_ros_snapshot`    - tools to capture models from currently running ROS deployments
-* `chris_rrbot_modeling`  - a demo model based on the [RRBot](https://github.com/ros-simulation/gazebo_ros_demos)
+* `chris_ros_modeling`       - ROS Entity metamodel classes and tools for
+                               marshalling/unmarshalling instances of these
+                               metamodels (model)
+* `chris_package_modeler`    - tool to capture specification model of existing ROS
+                               workspace
+* `chris_ros_snapshot`       - tools to capture models from currently running ROS
+                               deployments
+* `chris_haros_model_merger` - tool to merge CHRIS Models with HAROS Models in an
+                               attempt to create unified and comprehensive models
+* `chris_rrbot_modeling`     - a demo model based on the
+                               [RRBot](https://github.com/ros-simulation/gazebo_ros_demos)
 
 ### Initial Setup
 

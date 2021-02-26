@@ -76,6 +76,20 @@ class ROSModel(object):
                                   BankType.SERVICE_SPECIFICATION: 'service_specification_bank',
                                   BankType.ACTION_SPECIFICATION: 'action_specification_bank'}
 
+    BANK_TYPES_TO_BANK_CLASS = {BankType.NODE: chris_ros_modeling.metamodels.NodeBank,
+                                  BankType.NODELET:  chris_ros_modeling.metamodels.NodeletBank,
+                                  BankType.NODELET_MANAGER:  chris_ros_modeling.metamodels.NodeletManagerBank,
+                                  BankType.TOPIC:  chris_ros_modeling.metamodels.TopicBank,
+                                  BankType.ACTION:  chris_ros_modeling.metamodels.ActionBank,
+                                  BankType.SERVICE:  chris_ros_modeling.metamodels.ServiceBank,
+                                  BankType.PARAMETER:  chris_ros_modeling.metamodels.ParameterBank,
+                                  BankType.MACHINE:  chris_ros_modeling.metamodels.MachineBank,
+                                  BankType.PACKAGE_SPECIFICATION:  chris_ros_modeling.metamodels.PackageSpecificationBank,
+                                  BankType.NODE_SPECIFICATION:  chris_ros_modeling.metamodels.NodeSpecificationBank,
+                                  BankType.MESSAGE_SPECIFICATION:  chris_ros_modeling.metamodels.TypeSpecification,
+                                  BankType.SERVICE_SPECIFICATION:  chris_ros_modeling.metamodels.TypeSpecification,
+                                  BankType.ACTION_SPECIFICATION:  chris_ros_modeling.metamodels.TypeSpecification}
+
     def __init__(self, bank_dictionary):
         # @todo - not sure this is best way to construct or store,
         #           but requires the least changes to snapshot for now
@@ -398,6 +412,7 @@ class ROSModel(object):
             except IOError:
                 Logger.get_logger().log(LoggerLevel.ERROR,
                                         'Failed to read YAML data for {} : {}'.format(bank_output_name, file_name))
+                bank_dict[bank_type] = ROSModel.BANK_TYPES_TO_BANK_CLASS[bank_type]()
 
         # Create instance of the model class
         return ROSModel(bank_dict)
@@ -426,6 +441,7 @@ class ROSModel(object):
             except IOError:
                 Logger.get_logger().log(LoggerLevel.ERROR,
                                         'Failed to read Pickle data for {} : {}'.format(bank_output_name, file_name))
+                bank_dict[bank_type] = ROSModel.BANK_TYPES_TO_BANK_CLASS[bank_type]()
 
         # Create instance of the model class
         return ROSModel(bank_dict)
@@ -439,9 +455,10 @@ class ROSModel(object):
         """
         try:
             input_type, input_base_file_name = get_input_file_type(input_directory)
-        except IOError:
+        except IOError as e:
             Logger.get_logger().log(LoggerLevel.ERROR, 'Failed to deduce type from '+input_directory+' ...')
             print "                                     Did you specify input folder with yaml or pickle files?"
+            print "                                     " + e
             return None
 
         if input_type == 'yaml':

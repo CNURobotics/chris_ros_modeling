@@ -670,6 +670,11 @@ def get_options(argv):
     parser.add_argument("-b", "--base",       dest="base",    default="ros_model", type=str, action="store", help="output base file name (default='ros_snapshot')")
     parser.add_argument("-s", "--spec-input", dest="spec",    default="output/yaml", type=str, action="store", help="specification model input folder (default='output/yaml')")
     parser.add_argument("-v", "--version",    dest="version", default=False, action="store_true",          help="display version information")
+    parser.add_argument('-lt', '--logger_threshold', dest='logger_threshold',
+                        choices={'ERROR': LoggerLevel.ERROR, 'WARNING': LoggerLevel.WARNING,
+                                 'INFO': LoggerLevel.INFO, 'DEBUG': LoggerLevel.DEBUG},
+                        default='INFO',
+                        help='logger threshold (default=`INFO`)')
 
     options, _ = parser.parse_known_args(argv)
 
@@ -708,7 +713,7 @@ def main(argv):
 
         sys.exit(0)
 
-    Logger.LEVEL = LoggerLevel.INFO
+    Logger.LEVEL = options.logger_threshold
     ROSUtilities.get_ros_utilities('/'+options.base)  # initialize with node name
     filters.NodeFilter.BASE_EXCLUSIONS.add(ROSUtilities.get_ros_utilities().node_name)
     filters.Filter.FILTER_OUT_DEBUG = True

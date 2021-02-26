@@ -481,6 +481,11 @@ def get_options(argv):
     parser.add_argument("-a", "--all",           dest="all",      default=False,       action="store_true", help="output all possible formats")
     parser.add_argument("-b", "--base",          dest="base",     default="ros_model", type=str,       action="store", help="output base file name (default='ros_model')")
     parser.add_argument("-v", "--version",       dest="version",  default=False,       action="store_true", help="display version information")
+    parser.add_argument('-lt', '--logger_threshold', dest='logger_threshold',
+                        choices={'ERROR': LoggerLevel.ERROR, 'WARNING': LoggerLevel.WARNING,
+                                 'INFO': LoggerLevel.INFO, 'DEBUG': LoggerLevel.DEBUG},
+                        default='INFO',
+                        help='logger threshold (default=`INFO`)')
 
     options, _ = parser.parse_known_args(argv)
 
@@ -513,7 +518,7 @@ def main(argv):
 
         sys.exit(0)
 
-    Logger.LEVEL = LoggerLevel.INFO
+    Logger.LEVEL = options.logger_threshold
     Logger.get_logger().log(LoggerLevel.INFO, 'Initializing ROS package modeler...')
 
     start_time = time.time()
