@@ -1,0 +1,813 @@
+!TypeSpecificationBank
+names_to_metamodels:
+  actionlib/Test: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/actionlib/action/Test.action
+    name: actionlib/Test
+    package: actionlib
+    source: package_modeler
+    spec: '
+
+      int32 goal
+
+      ---
+
+      int32 result
+
+      ---
+
+      int32 feedback
+
+      '
+    version: 0
+  actionlib/TestRequest: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/actionlib/action/TestRequest.action
+    name: actionlib/TestRequest
+    package: actionlib
+    source: package_modeler
+    spec: '
+
+      int32 TERMINATE_SUCCESS = 0
+
+      int32 TERMINATE_ABORTED = 1
+
+      int32 TERMINATE_REJECTED = 2
+
+      int32 TERMINATE_LOSE = 3
+
+      int32 TERMINATE_DROP = 4
+
+      int32 TERMINATE_EXCEPTION = 5
+
+      int32 terminate_status
+
+      bool ignore_cancel  # If true, ignores requests to cancel
+
+      string result_text
+
+      int32 the_result    # Desired value for the_result in the Result
+
+      bool is_simple_client
+
+      duration delay_accept  # Delays accepting the goal by this amount of time
+
+      duration delay_terminate  # Delays terminating for this amount of time
+
+      duration pause_status  # Pauses the status messages for this amount of time
+
+      ---
+
+      int32 the_result
+
+      bool is_simple_server
+
+      ---
+
+      '
+    version: 0
+  actionlib/TwoInts: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/actionlib/action/TwoInts.action
+    name: actionlib/TwoInts
+    package: actionlib
+    source: package_modeler
+    spec: '
+
+      int64 a
+
+      int64 b
+
+      ---
+
+      int64 sum
+
+      ---
+
+      '
+    version: 0
+  actionlib_tutorials/Averaging: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/actionlib_tutorials/action/Averaging.action
+    name: actionlib_tutorials/Averaging
+    package: actionlib_tutorials
+    source: package_modeler
+    spec: '
+
+      #goal definition
+
+      int32 samples
+
+      ---
+
+      #result definition
+
+      float32 mean
+
+      float32 std_dev
+
+      ---
+
+      #feedback
+
+      int32 sample
+
+      float32 data
+
+      float32 mean
+
+      float32 std_dev
+
+      '
+    version: 0
+  actionlib_tutorials/Fibonacci: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/actionlib_tutorials/action/Fibonacci.action
+    name: actionlib_tutorials/Fibonacci
+    package: actionlib_tutorials
+    source: package_modeler
+    spec: '
+
+      #goal definition
+
+      int32 order
+
+      ---
+
+      #result definition
+
+      int32[] sequence
+
+      ---
+
+      #feedback
+
+      int32[] sequence
+
+      '
+    version: 0
+  control_msgs/FollowJointTrajectory: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/control_msgs/action/FollowJointTrajectory.action
+    name: control_msgs/FollowJointTrajectory
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      # The joint trajectory to follow
+
+      trajectory_msgs/JointTrajectory trajectory
+
+
+      # Tolerances for the trajectory.  If the measured joint values fall
+
+      # outside the tolerances the trajectory goal is aborted.  Any
+
+      # tolerances that are not specified (by being omitted or set to 0) are
+
+      # set to the defaults for the action server (often taken from the
+
+      # parameter server).
+
+
+      # Tolerances applied to the joints as the trajectory is executed.  If
+
+      # violated, the goal aborts with error_code set to
+
+      # PATH_TOLERANCE_VIOLATED.
+
+      JointTolerance[] path_tolerance
+
+
+      # To report success, the joints must be within goal_tolerance of the
+
+      # final trajectory value.  The goal must be achieved by time the
+
+      # trajectory ends plus goal_time_tolerance.  (goal_time_tolerance
+
+      # allows some leeway in time, so that the trajectory goal can still
+
+      # succeed even if the joints reach the goal some time after the
+
+      # precise end time of the trajectory).
+
+      #
+
+      # If the joints are not within goal_tolerance after "trajectory finish
+
+      # time" + goal_time_tolerance, the goal aborts with error_code set to
+
+      # GOAL_TOLERANCE_VIOLATED
+
+      JointTolerance[] goal_tolerance
+
+      duration goal_time_tolerance
+
+
+      ---
+
+      int32 error_code
+
+      int32 SUCCESSFUL = 0
+
+      int32 INVALID_GOAL = -1
+
+      int32 INVALID_JOINTS = -2
+
+      int32 OLD_HEADER_TIMESTAMP = -3
+
+      int32 PATH_TOLERANCE_VIOLATED = -4
+
+      int32 GOAL_TOLERANCE_VIOLATED = -5
+
+
+      # Human readable description of the error code. Contains complementary
+
+      # information that is especially useful when execution fails, for instance:
+
+      # - INVALID_GOAL: The reason for the invalid goal (e.g., the requested
+
+      #   trajectory is in the past).
+
+      # - INVALID_JOINTS: The mismatch between the expected controller joints
+
+      #   and those provided in the goal.
+
+      # - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint
+
+      #   violated which tolerance, and by how much.
+
+      string error_string
+
+
+      ---
+
+      Header header
+
+      string[] joint_names
+
+      trajectory_msgs/JointTrajectoryPoint desired
+
+      trajectory_msgs/JointTrajectoryPoint actual
+
+      trajectory_msgs/JointTrajectoryPoint error
+
+      '
+    version: 0
+  control_msgs/GripperCommand: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/control_msgs/action/GripperCommand.action
+    name: control_msgs/GripperCommand
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      GripperCommand command
+
+      ---
+
+      float64 position  # The current gripper gap size (in meters)
+
+      float64 effort    # The current effort exerted (in Newtons)
+
+      bool stalled      # True iff the gripper is exerting max effort and not moving
+
+      bool reached_goal # True iff the gripper position has reached the commanded
+      setpoint
+
+      ---
+
+      float64 position  # The current gripper gap size (in meters)
+
+      float64 effort    # The current effort exerted (in Newtons)
+
+      bool stalled      # True iff the gripper is exerting max effort and not moving
+
+      bool reached_goal # True iff the gripper position has reached the commanded
+      setpoint
+
+      '
+    version: 0
+  control_msgs/JointTrajectory: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/control_msgs/action/JointTrajectory.action
+    name: control_msgs/JointTrajectory
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      trajectory_msgs/JointTrajectory trajectory
+
+      ---
+
+      ---
+
+      '
+    version: 0
+  control_msgs/PointHead: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/control_msgs/action/PointHead.action
+    name: control_msgs/PointHead
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      geometry_msgs/PointStamped target
+
+      geometry_msgs/Vector3 pointing_axis
+
+      string pointing_frame
+
+      duration min_duration
+
+      float64 max_velocity
+
+      ---
+
+      ---
+
+      float64 pointing_angle_error
+
+      '
+    version: 0
+  control_msgs/SingleJointPosition: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/control_msgs/action/SingleJointPosition.action
+    name: control_msgs/SingleJointPosition
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      float64 position
+
+      duration min_duration
+
+      float64 max_velocity
+
+      ---
+
+      ---
+
+      Header header
+
+      float64 position
+
+      float64 velocity
+
+      float64 error
+
+      '
+    version: 0
+  move_base_msgs/MoveBase: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/move_base_msgs/action/MoveBase.action
+    name: move_base_msgs/MoveBase
+    package: move_base_msgs
+    source: package_modeler
+    spec: '
+
+      geometry_msgs/PoseStamped target_pose
+
+      ---
+
+      ---
+
+      geometry_msgs/PoseStamped base_position
+
+      '
+    version: 0
+  moveit_msgs/ExecuteTrajectory: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/moveit_msgs/action/ExecuteTrajectory.action
+    name: moveit_msgs/ExecuteTrajectory
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # The trajectory to execute
+
+      RobotTrajectory trajectory
+
+
+      ---
+
+
+      # Error code - encodes the overall reason for failure
+
+      MoveItErrorCodes error_code
+
+
+      ---
+
+
+      # The internal state that the move group action currently is in
+
+      string state
+
+      '
+    version: 0
+  moveit_msgs/MoveGroup: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/moveit_msgs/action/MoveGroup.action
+    name: moveit_msgs/MoveGroup
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # Motion planning request to pass to planner
+
+      MotionPlanRequest request
+
+
+      # Planning options
+
+      PlanningOptions planning_options
+
+
+      ---
+
+
+      # An error code reflecting what went wrong
+
+      MoveItErrorCodes error_code
+
+
+      # The full starting state of the robot at the start of the trajectory
+
+      moveit_msgs/RobotState trajectory_start
+
+
+      # The trajectory that moved group produced for execution
+
+      moveit_msgs/RobotTrajectory planned_trajectory
+
+
+      # The trace of the trajectory recorded during execution
+
+      moveit_msgs/RobotTrajectory executed_trajectory
+
+
+      # The amount of time it took to complete the motion plan
+
+      float64 planning_time
+
+
+      ---
+
+
+      # The internal state that the move group action currently is in
+
+      string state
+
+      '
+    version: 0
+  moveit_msgs/MoveGroupSequence: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/moveit_msgs/action/MoveGroupSequence.action
+    name: moveit_msgs/MoveGroupSequence
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # A list of motion commands - one for each section of the sequence
+
+      MotionSequenceRequest request
+
+
+      # Planning options
+
+      PlanningOptions planning_options
+
+      ---
+
+
+      # Response comprising information on all sections of the sequence
+
+      MotionSequenceResponse response
+
+
+      ---
+
+
+      # The internal state that the move group action currently is in
+
+      string state
+
+      '
+    version: 0
+  moveit_msgs/Pickup: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/moveit_msgs/action/Pickup.action
+    name: moveit_msgs/Pickup
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # An action for picking up an object
+
+
+      # The name of the object to pick up (as known in the planning scene)
+
+      string target_name
+
+
+      # which group should be used to plan for pickup
+
+      string group_name
+
+
+      # which end-effector to be used for pickup (ideally descending from the group
+      above)
+
+      string end_effector
+
+
+      # a list of possible grasps to be used. At least one grasp must be filled in
+
+      Grasp[] possible_grasps
+
+
+      # the name that the support surface (e.g. table) has in the collision map
+
+      # can be left empty if no name is available
+
+      string support_surface_name
+
+
+      # whether collisions between the gripper and the support surface should be acceptable
+
+      # during move from pre-grasp to grasp and during lift. Collisions when moving
+      to the
+
+      # pre-grasp location are still not allowed even if this is set to true.
+
+      bool allow_gripper_support_collision
+
+
+      # The names of the links the object to be attached is allowed to touch;
+
+      # If this is left empty, it defaults to the links in the used end-effector
+
+      string[] attached_object_touch_links
+
+
+      # Optionally notify the pick action that it should approach the object further,
+
+      # as much as possible (this minimizing the distance to the object before the
+      grasp)
+
+      # along the approach direction; Note: this option changes the grasping poses
+
+      # supplied in possible_grasps[] such that they are closer to the object when
+      possible.
+
+      bool minimize_object_distance
+
+
+      # Optional constraints to be imposed on every point in the motion plan
+
+      Constraints path_constraints
+
+
+      # The name of the motion planner to use. If no name is specified,
+
+      # a default motion planner will be used
+
+      string planner_id
+
+
+      # an optional list of obstacles that we have semantic information about
+
+      # and that can be touched/pushed/moved in the course of grasping;
+
+      # CAREFUL: If the object name ''all'' is used, collisions with all objects are
+      disabled during the approach & lift.
+
+      string[] allowed_touch_objects
+
+
+      # The maximum amount of time the motion planner is allowed to plan for
+
+      float64 allowed_planning_time
+
+
+      # Planning options
+
+      PlanningOptions planning_options
+
+
+      ---
+
+
+      # The overall result of the pickup attempt
+
+      MoveItErrorCodes error_code
+
+
+      # The full starting state of the robot at the start of the trajectory
+
+      RobotState trajectory_start
+
+
+      # The trajectory that moved group produced for execution
+
+      RobotTrajectory[] trajectory_stages
+
+
+      string[] trajectory_descriptions
+
+
+      # The performed grasp, if attempt was successful
+
+      Grasp grasp
+
+
+      # The amount of time in seconds it took to complete the plan
+
+      float64 planning_time
+
+      ---
+
+
+      # The internal state that the pickup action currently is in
+
+      string state
+
+      '
+    version: 0
+  moveit_msgs/Place: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/moveit_msgs/action/Place.action
+    name: moveit_msgs/Place
+    package: moveit_msgs
+    source: package_modeler
+    spec: "\n# An action for placing an object\n\n# which group to be used to plan\
+      \ for grasping\nstring group_name\n\n# the name of the attached object to place\n\
+      string attached_object_name\n\n# a list of possible transformations for placing\
+      \ the object\nPlaceLocation[] place_locations\n\n# if the user prefers setting\
+      \ the eef pose (same as in pick) rather than \n# the location of the object,\
+      \ this flag should be set to true\nbool place_eef\n\n# the name that the support\
+      \ surface (e.g. table) has in the collision world\n# can be left empty if no\
+      \ name is available\nstring support_surface_name\n\n# whether collisions between\
+      \ the gripper and the support surface should be acceptable\n# during move from\
+      \ pre-place to place and during retreat. Collisions when moving to the\n# pre-place\
+      \ location are still not allowed even if this is set to true.\nbool allow_gripper_support_collision\n\
+      \n# Optional constraints to be imposed on every point in the motion plan\nConstraints\
+      \ path_constraints\n\n# The name of the motion planner to use. If no name is\
+      \ specified,\n# a default motion planner will be used\nstring planner_id\n\n\
+      # an optional list of obstacles that we have semantic information about\n# and\
+      \ that can be touched/pushed/moved in the course of placing;\n# CAREFUL: If\
+      \ the object name 'all' is used, collisions with all objects are disabled during\
+      \ the approach & retreat.\nstring[] allowed_touch_objects\n\n# The maximum amount\
+      \ of time the motion planner is allowed to plan for\nfloat64 allowed_planning_time\n\
+      \n# Planning options\nPlanningOptions planning_options\n\n---\n\n# The result\
+      \ of the place attempt\nMoveItErrorCodes error_code\n\n# The full starting state\
+      \ of the robot at the start of the trajectory\nRobotState trajectory_start\n\
+      \n# The trajectory that moved group produced for execution\nRobotTrajectory[]\
+      \ trajectory_stages\n\nstring[] trajectory_descriptions\n\n# The successful\
+      \ place location, if any\nPlaceLocation place_location\n\n# The amount of time\
+      \ in seconds it took to complete the plan\nfloat64 planning_time\n---\n\n# The\
+      \ internal state that the place action currently is in\nstring state\n"
+    version: 0
+  nav_msgs/GetMap: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/nav_msgs/action/GetMap.action
+    name: nav_msgs/GetMap
+    package: nav_msgs
+    source: package_modeler
+    spec: '
+
+      # Get the map as a nav_msgs/OccupancyGrid
+
+      ---
+
+      nav_msgs/OccupancyGrid map
+
+      ---
+
+      # no feedback'
+    version: 0
+  object_recognition_msgs/ObjectRecognition: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/object_recognition_msgs/action/ObjectRecognition.action
+    name: object_recognition_msgs/ObjectRecognition
+    package: object_recognition_msgs
+    source: package_modeler
+    spec: '
+
+      # Optional ROI to use for the object detection
+
+      bool use_roi
+
+      float32[] filter_limits
+
+      ---
+
+      # Send the found objects, see the msg files for docs
+
+      object_recognition_msgs/RecognizedObjectArray recognized_objects
+
+      ---
+
+      #no feedback
+
+      '
+    version: 0
+  tf2_msgs/LookupTransform: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/tf2_msgs/action/LookupTransform.action
+    name: tf2_msgs/LookupTransform
+    package: tf2_msgs
+    source: package_modeler
+    spec: '
+
+      #Simple API
+
+      string target_frame
+
+      string source_frame
+
+      time source_time
+
+      duration timeout
+
+
+      #Advanced API
+
+      time target_time
+
+      string fixed_frame
+
+
+      #Whether or not to use the advanced API
+
+      bool advanced
+
+
+      ---
+
+      geometry_msgs/TransformStamped transform
+
+      tf2_msgs/TF2Error error
+
+      ---
+
+      '
+    version: 0
+  turtle_actionlib/Shape: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/turtle_actionlib/action/Shape.action
+    name: turtle_actionlib/Shape
+    package: turtle_actionlib
+    source: package_modeler
+    spec: '
+
+      #goal definition
+
+      int32 edges
+
+      float32 radius
+
+      ---
+
+      #result definition
+
+      float32 interior_angle
+
+      float32 apothem
+
+      ---
+
+      #feedback
+
+
+      '
+    version: 0
+  twist_mux_msgs/JoyPriority: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/twist_mux_msgs/action/JoyPriority.action
+    name: twist_mux_msgs/JoyPriority
+    package: twist_mux_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      ---
+
+      '
+    version: 0
+  twist_mux_msgs/JoyTurbo: !TypeSpecification
+    construct_type: action
+    file_path: /opt/ros/melodic/share/twist_mux_msgs/action/JoyTurbo.action
+    name: twist_mux_msgs/JoyTurbo
+    package: twist_mux_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      ---
+
+      '
+    version: 0

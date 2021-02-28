@@ -1,0 +1,13 @@
+[
+  {
+    "packages":[
+      "rrbot_gazebo",
+      "chris_rrbot_modeling",
+      "rrbot_description",
+      "xacro",
+      "gazebo_ros"
+    ],
+    "repositories":[],
+    "id":"default"
+  }
+]

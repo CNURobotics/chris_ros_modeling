@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+packages:
+  - rrbot_gazebo
+  - chris_rrbot_modeling
+configurations:
+  rrbot:
+    - rrbot_gazebo/launch/rrbot_world.launch
+    - chris_rrbot_modeling/launch/rrbot_control_action.launch
+    - chris_rrbot_modeling/launch/rrbot_rqt_action.launch
+    - chris_rrbot_modeling/launch/rrbot_action_demo.launch

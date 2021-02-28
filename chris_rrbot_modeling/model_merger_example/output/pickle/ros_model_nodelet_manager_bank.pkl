@@ -1,0 +1,16 @@
+ccopy_reg
+_reconstructor
+p0
+(cchris_ros_modeling.deployments.nodelet_manager
+NodeletManagerBank
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'names_to_metamodels'
+p6
+(dp7
+sb.

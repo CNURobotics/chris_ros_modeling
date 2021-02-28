@@ -1,0 +1,262 @@
+!NodeBank
+names_to_metamodels:
+  /gazebo: !Node
+    action_clients: {}
+    action_servers:
+      /rrbot/position_controller/follow_joint_trajectory: null
+    cmdline: UNKNOWN CMDLINE FOR /gazebo
+    cpu_percent: UNKNOWN CPU_PERCENT FOR /gazebo
+    executable_file: UNKNOWN EXE FOR /gazebo
+    executable_name: UNKNOWN NAME FOR /gazebo
+    launch_file: /opt/ros/kinetic/share/gazebo_ros/launch/empty_world.launch
+    memory_info: UNKNOWN MEMORY_INFO FOR /gazebo
+    memory_percent: UNKNOWN MEMORY_PERCENT FOR /gazebo
+    name: /gazebo
+    node: gazebo_ros/debug
+    num_threads: UNKNOWN NUM_THREADS FOR /gazebo
+    provided_services:
+      /gazebo/apply_body_wrench: null
+      /gazebo/apply_joint_effort: null
+      /gazebo/clear_body_wrenches: null
+      /gazebo/clear_joint_forces: null
+      /gazebo/delete_light: null
+      /gazebo/delete_model: null
+      /gazebo/get_joint_properties: null
+      /gazebo/get_light_properties: null
+      /gazebo/get_link_properties: null
+      /gazebo/get_link_state: null
+      /gazebo/get_model_properties: null
+      /gazebo/get_model_state: null
+      /gazebo/get_physics_properties: null
+      /gazebo/get_world_properties: null
+      /gazebo/pause_physics: null
+      /gazebo/reset_simulation: null
+      /gazebo/reset_world: null
+      /gazebo/set_joint_properties: null
+      /gazebo/set_light_properties: null
+      /gazebo/set_link_properties: null
+      /gazebo/set_link_state: null
+      /gazebo/set_model_configuration: null
+      /gazebo/set_model_state: null
+      /gazebo/set_parameters: null
+      /gazebo/set_physics_properties: null
+      /gazebo/spawn_sdf_model: null
+      /gazebo/spawn_urdf_model: null
+      /gazebo/unpause_physics: null
+      /rrbot/camera1/image_raw/compressed/set_parameters: null
+      /rrbot/camera1/image_raw/compressedDepth/set_parameters: null
+      /rrbot/camera1/image_raw/theora/set_parameters: null
+      /rrbot/camera1/set_camera_info: null
+      /rrbot/camera1/set_parameters: null
+      /rrbot/controller_manager/list_controller_types: null
+      /rrbot/controller_manager/list_controllers: null
+      /rrbot/controller_manager/load_controller: null
+      /rrbot/controller_manager/reload_controller_libraries: null
+      /rrbot/controller_manager/switch_controller: null
+      /rrbot/controller_manager/unload_controller: null
+      /rrbot/position_controller/gains/joint1/set_parameters: null
+      /rrbot/position_controller/gains/joint2/set_parameters: null
+      /rrbot/position_controller/query_state: null
+    published_topic_names:
+      /clock: null
+      /gazebo/link_states: null
+      /gazebo/model_states: null
+      /gazebo/parameter_descriptions: null
+      /gazebo/parameter_updates: null
+      /rrbot/camera1/camera_info: null
+      /rrbot/camera1/image_raw: null
+      /rrbot/camera1/image_raw/compressed: null
+      /rrbot/camera1/image_raw/compressed/parameter_descriptions: null
+      /rrbot/camera1/image_raw/compressed/parameter_updates: null
+      /rrbot/camera1/image_raw/compressedDepth: null
+      /rrbot/camera1/image_raw/compressedDepth/parameter_descriptions: null
+      /rrbot/camera1/image_raw/compressedDepth/parameter_updates: null
+      /rrbot/camera1/image_raw/theora: null
+      /rrbot/camera1/image_raw/theora/parameter_descriptions: null
+      /rrbot/camera1/image_raw/theora/parameter_updates: null
+      /rrbot/camera1/parameter_descriptions: null
+      /rrbot/camera1/parameter_updates: null
+      /rrbot/joint_states: null
+      /rrbot/laser/scan: null
+      /rrbot/position_controller/gains/joint1/parameter_descriptions: null
+      /rrbot/position_controller/gains/joint1/parameter_updates: null
+      /rrbot/position_controller/gains/joint2/parameter_descriptions: null
+      /rrbot/position_controller/gains/joint2/parameter_updates: null
+      /rrbot/position_controller/state: null
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: haros_chris_model_merger, ros_snapshot
+    subscribed_topic_names:
+      /clock: null
+      /gazebo/set_link_state: null
+      /gazebo/set_model_state: null
+      /rrbot/position_controller/command: null
+    uri: http://XX.XX.XX.216:42599/
+    version: 1
+  /gazebo_gui: !Node
+    action_clients: {}
+    action_servers: {}
+    cmdline: UNKNOWN CMDLINE FOR /gazebo_gui
+    cpu_percent: UNKNOWN CPU_PERCENT FOR /gazebo_gui
+    executable_file: UNKNOWN EXE FOR /gazebo_gui
+    executable_name: UNKNOWN NAME FOR /gazebo_gui
+    memory_info: UNKNOWN MEMORY_INFO FOR /gazebo_gui
+    memory_percent: UNKNOWN MEMORY_PERCENT FOR /gazebo_gui
+    name: /gazebo_gui
+    node: null
+    num_threads: UNKNOWN NUM_THREADS FOR /gazebo_gui
+    provided_services: {}
+    published_topic_names: {}
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: ros_snapshot
+    subscribed_topic_names:
+      /clock: null
+    uri: http://XX.XX.XX.216:35103/
+    version: 0
+  /robot_state_publisher: !Node
+    action_clients: {}
+    action_servers: {}
+    cmdline:
+    - /opt/ros/melodic/lib/robot_state_publisher/robot_state_publisher
+    - /joint_states:=/rrbot/joint_states
+    - __name:=robot_state_publisher
+    - __log:=/home/robotics/.ros/log/c274d628-ea66-11ea-b2b8-f8b156abe24c/robot_state_publisher-2.log
+    cpu_percent: 0.0
+    executable_file: /opt/ros/melodic/lib/robot_state_publisher/robot_state_publisher
+    executable_name: robot_state_publisher
+    launch_file: /home/drumheller/ros/CHRISLab/src/chris_ros_modeling/chris_rrbot_modeling/launch/rrbot_control_action.launch
+    memory_info: pmem(rss=16158720, vms=473698304, shared=14409728, text=90112, lib=0,
+      data=44425216, dirty=0)
+    memory_percent: 0.1949417917151962
+    name: /robot_state_publisher
+    node: robot_state_publisher/robot_state_publisher
+    num_threads: 6
+    provided_services: {}
+    published_topic_names:
+      /tf: tf
+      /tf_static: tf_static
+    read_parameter_names:
+      /ignore_timestamp: ignore_timestamp
+      /publish_frequency: publish_frequency
+      /robot_description: robot_description
+      /tf_prefix: tf_prefix
+      /use_tf_static: use_tf_static
+    set_parameter_names: {}
+    source: haros_chris_model_merger, ros_snapshot
+    subscribed_topic_names:
+      /clock: clock
+      /rrbot/joint_states: joint_states
+    uri: http://XX.XX.XX.157:35149/
+    version: 1
+  /rrbot/controller_spawner: !Node
+    action_clients: {}
+    action_servers: {}
+    client_services:
+      /rrbot/controller_manager/load_controller: load_controller
+      /rrbot/controller_manager/switch_controller: switch_controller
+      /rrbot/controller_manager/unload_controller: unload_controller
+    cmdline:
+    - python2
+    - /opt/ros/melodic/lib/controller_manager/spawner
+    - joint_state_controller
+    - position_controller
+    - __name:=controller_spawner
+    - __log:=/home/robotics/.ros/log/c274d628-ea66-11ea-b2b8-f8b156abe24c/rrbot-controller_spawner-1.log
+    cpu_percent: 0.0
+    executable_file: /usr/bin/python2.7
+    executable_name: python2
+    launch_file: /home/drumheller/ros/CHRISLab/src/chris_ros_modeling/chris_rrbot_modeling/launch/rrbot_control_action.launch
+    memory_info: pmem(rss=55947264, vms=549236736, shared=8138752, text=3174400, lib=0,
+      data=99127296, dirty=0)
+    memory_percent: 0.6749581579310178
+    name: /rrbot/controller_spawner
+    node: controller_manager/spawner
+    num_threads: 6
+    provided_services: {}
+    published_topic_names: {}
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: haros_chris_model_merger, ros_snapshot
+    subscribed_topic_names:
+      /clock: clock
+    uri: http://XX.XX.XX.157:44127/
+    version: 1
+  /rrbot_action_demo: !Node
+    action_clients: {}
+    action_servers: {}
+    client_services: {}
+    cmdline: []
+    cpu_percent: null
+    executable_file: null
+    executable_name: null
+    launch_file: /home/drumheller/ros/CHRISLab/src/chris_ros_modeling/chris_rrbot_modeling/launch/rrbot_action_demo.launch
+    memory_info: null
+    memory_percent: null
+    name: /rrbot_action_demo
+    node: chris_rrbot_modeling/rrbot_action_demo
+    num_threads: null
+    provided_services: {}
+    published_topic_names: {}
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: haros_chris_model_merger
+    subscribed_topic_names: {}
+    uri: null
+    version: 0
+  /rrbot_control_action_19653_1598754066562: !Node
+    action_clients:
+      /rrbot/position_controller/follow_joint_trajectory: follow_joint_trajectory
+    action_servers: {}
+    cmdline:
+    - python
+    - /home/robotics/robotics/src/ros_probe/chris_rrbot_modeling/bin/rrbot_action_demo
+    cpu_percent: 0.0
+    executable_file: /usr/bin/python2.7
+    executable_name: python
+    memory_info: pmem(rss=56938496, vms=927731712, shared=7876608, text=3174400, lib=0,
+      data=142774272, dirty=0)
+    memory_percent: 0.6869165644189968
+    name: /rrbot_control_action_19653_1598754066562
+    node: chris_rrbot_modeling/rrbot_action_demo
+    num_threads: 11
+    provided_services: {}
+    published_topic_names: {}
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: ros_snapshot
+    subscribed_topic_names:
+      /clock: clock
+    uri: http://XX.XX.XX.157:36277/
+    version: 0
+  /rrbot_rqt: !Node
+    action_clients: {}
+    action_servers: {}
+    cmdline:
+    - python
+    - /opt/ros/melodic/lib/rqt_gui/rqt_gui
+    - --perspective-file
+    - /home/robotics/robotics/src/ros_probe/chris_rrbot_modeling/launch/rrbot_rqt_action.perspective
+    - __name:=rrbot_rqt
+    - __log:=/home/robotics/.ros/log/c274d628-ea66-11ea-b2b8-f8b156abe24c/rrbot_rqt-1.log
+    cpu_percent: 0.0
+    executable_file: /usr/bin/python2.7
+    executable_name: python
+    launch_file: /home/drumheller/ros/CHRISLab/src/chris_ros_modeling/chris_rrbot_modeling/launch/rrbot_rqt_action.launch
+    memory_info: pmem(rss=220246016, vms=1720557568, shared=93163520, text=3174400,
+      lib=0, data=234250240, dirty=0)
+    memory_percent: 2.6570887407649724
+    name: /rrbot_rqt
+    node: rqt_gui/rqt_gui
+    num_threads: 13
+    provided_services: {}
+    published_topic_names:
+      /rrbot/joint1_position_controller/command: command
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: haros_chris_model_merger, ros_snapshot
+    subscribed_topic_names:
+      /clock: clock
+      /rrbot/position_controller/state: state
+    uri: http://XX.XX.XX.157:40695/
+    version: 1

@@ -1,0 +1,27 @@
+!NodeletBank
+names_to_metamodels:
+  /urdf_spawner: !Nodelet
+    action_clients: {}
+    action_servers: {}
+    client_services: {}
+    cmdline: -urdf -model rrbot -param robot_description
+    cpu_percent: null
+    executable_file: null
+    executable_name: null
+    launch_file: /home/drumheller/ros/CHRISLab/src/gazebo_ros_demos/rrbot_gazebo/launch/rrbot_world.launch
+    memory_info: null
+    memory_percent: null
+    name: /urdf_spawner
+    node: gazebo_ros/spawn_model
+    nodelet_manager_name: ''
+    num_threads: null
+    provided_services: {}
+    published_nodelet_topic_names: {}
+    published_topic_names: {}
+    read_parameter_names: {}
+    set_parameter_names: {}
+    source: haros_chris_model_merger
+    subscribed_nodelet_topic_names: {}
+    subscribed_topic_names: {}
+    uri: null
+    version: 0

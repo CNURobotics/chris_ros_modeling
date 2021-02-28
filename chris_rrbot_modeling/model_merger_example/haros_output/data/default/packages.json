@@ -1,0 +1,75 @@
+[
+  {
+    "wiki":"http://wiki.ros.org/chris_ros_modeling",
+    "metapackage":false,
+    "description":"RRBot with action controller for chris_ros_modeling demo",
+    "repository":null,
+    "maintainers":[
+      "David Conner"
+    ],
+    "dependencies":[
+      "chris_ros_modeling",
+      "rrbot_gazebo",
+      "catkin",
+      "rrbot_description"
+    ],
+    "authors":[
+      "David Conner"
+    ],
+    "bugTracker":null,
+    "id":"chris_rrbot_modeling",
+    "size":"2873.90",
+    "lines":82600,
+    "analysis":{
+      "metrics":{},
+      "violations":{
+        "haros_plugin_cpplint:one_command_per_line":1,
+        "haros_plugin_cpplint:whitespace_before_paren":16,
+        "haros_plugin_pylint:error":15,
+        "halstead_bugs_above_2":1,
+        "haros_plugin_cpplint:whitespace_before_comments":1,
+        "haros_plugin_pylint:convention":7,
+        "haros_plugin_cpplint:whitespace_before_comment_text":1,
+        "min_comment_ratio_20":1,
+        "halstead_volume_above_8000":1,
+        "haros_plugin_pylint:warning":3,
+        "haros_plugin_cpplint:closing_brace_line":28,
+        "haros_plugin_cpplint:newline_terminator":1,
+        "haros_plugin_cpplint:opening_brace_line":26,
+        "haros_plugin_cpplint:max_line_length_80":6
+      }
+    },
+    "version":"0.0.0",
+    "sloc":73491
+  },
+  {
+    "wiki":"http://gazebosim.org/w/index.php?title=Tutorials/1.9/Using_A_URDF_In_Gazebo",
+    "metapackage":false,
+    "description":"rrbot_gazebo",
+    "repository":"https://github.com/osrf/gazebo_ros_demos",
+    "maintainers":[
+      "Dave Coleman"
+    ],
+    "dependencies":[
+      "gazebo_ros_control",
+      "xacro",
+      "rrbot_description",
+      "rrbot_control",
+      "gazebo_ros",
+      "gazebo_plugins"
+    ],
+    "authors":[
+      "Dave Coleman"
+    ],
+    "bugTracker":"https://github.com/osrf/gazebo_ros_demos/issues",
+    "id":"rrbot_gazebo",
+    "size":"3.07",
+    "lines":93,
+    "analysis":{
+      "metrics":{},
+      "violations":{}
+    },
+    "version":"0.1.0",
+    "sloc":73
+  }
+]

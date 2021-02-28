@@ -1,0 +1,2826 @@
+!TypeSpecificationBank
+names_to_metamodels:
+  capabilities/EstablishBond: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/EstablishBond.srv
+    name: capabilities/EstablishBond
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+      string bond_id
+
+      '
+    version: 0
+  capabilities/FreeCapability: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/FreeCapability.srv
+    name: capabilities/FreeCapability
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string capability
+
+      string bond_id
+
+      ---
+
+      '
+    version: 0
+  capabilities/GetCapabilitySpec: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetCapabilitySpec.srv
+    name: capabilities/GetCapabilitySpec
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string capability_spec
+
+      ---
+
+      CapabilitySpec capability_spec'
+    version: 0
+  capabilities/GetCapabilitySpecs: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetCapabilitySpecs.srv
+    name: capabilities/GetCapabilitySpecs
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+      CapabilitySpec[] capability_specs'
+    version: 0
+  capabilities/GetInterfaces: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetInterfaces.srv
+    name: capabilities/GetInterfaces
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+      string[] interfaces'
+    version: 0
+  capabilities/GetNodeletManagerName: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetNodeletManagerName.srv
+    name: capabilities/GetNodeletManagerName
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+      string nodelet_manager_name
+
+      '
+    version: 0
+  capabilities/GetProviders: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetProviders.srv
+    name: capabilities/GetProviders
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string interface
+
+      bool include_semantic
+
+      ---
+
+      string[] providers
+
+      string default_provider
+
+      '
+    version: 0
+  capabilities/GetRemappings: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetRemappings.srv
+    name: capabilities/GetRemappings
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string spec
+
+      ---
+
+      Remapping[] topics
+
+      Remapping[] services
+
+      Remapping[] actions
+
+      Remapping[] parameters
+
+      '
+    version: 0
+  capabilities/GetRunningCapabilities: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetRunningCapabilities.srv
+    name: capabilities/GetRunningCapabilities
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+      RunningCapability[] running_capabilities
+
+      '
+    version: 0
+  capabilities/GetSemanticInterfaces: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/GetSemanticInterfaces.srv
+    name: capabilities/GetSemanticInterfaces
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string interface
+
+      ---
+
+      string[] semantic_interfaces'
+    version: 0
+  capabilities/StartCapability: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/StartCapability.srv
+    name: capabilities/StartCapability
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string capability
+
+      string preferred_provider
+
+      ---
+
+      bool successful'
+    version: 0
+  capabilities/StopCapability: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/StopCapability.srv
+    name: capabilities/StopCapability
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string capability
+
+      ---
+
+      bool successful'
+    version: 0
+  capabilities/UseCapability: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/capabilities/srv/UseCapability.srv
+    name: capabilities/UseCapability
+    package: capabilities
+    source: package_modeler
+    spec: '
+
+      string capability
+
+      string preferred_provider
+
+      string bond_id
+
+      ---
+
+      '
+    version: 0
+  cartographer_ros_msgs/FinishTrajectory: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/cartographer_ros_msgs/srv/FinishTrajectory.srv
+    name: cartographer_ros_msgs/FinishTrajectory
+    package: cartographer_ros_msgs
+    source: package_modeler
+    spec: '
+
+      # Copyright 2016 The Cartographer Authors
+
+      #
+
+      # Licensed under the Apache License, Version 2.0 (the "License");
+
+      # you may not use this file except in compliance with the License.
+
+      # You may obtain a copy of the License at
+
+      #
+
+      #      http://www.apache.org/licenses/LICENSE-2.0
+
+      #
+
+      # Unless required by applicable law or agreed to in writing, software
+
+      # distributed under the License is distributed on an "AS IS" BASIS,
+
+      # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+      # See the License for the specific language governing permissions and
+
+      # limitations under the License.
+
+
+      int32 trajectory_id
+
+      ---
+
+      cartographer_ros_msgs/StatusResponse status
+
+      '
+    version: 0
+  cartographer_ros_msgs/StartTrajectory: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/cartographer_ros_msgs/srv/StartTrajectory.srv
+    name: cartographer_ros_msgs/StartTrajectory
+    package: cartographer_ros_msgs
+    source: package_modeler
+    spec: '
+
+      # Copyright 2016 The Cartographer Authors
+
+      #
+
+      # Licensed under the Apache License, Version 2.0 (the "License");
+
+      # you may not use this file except in compliance with the License.
+
+      # You may obtain a copy of the License at
+
+      #
+
+      #      http://www.apache.org/licenses/LICENSE-2.0
+
+      #
+
+      # Unless required by applicable law or agreed to in writing, software
+
+      # distributed under the License is distributed on an "AS IS" BASIS,
+
+      # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+      # See the License for the specific language governing permissions and
+
+      # limitations under the License.
+
+
+      cartographer_ros_msgs/TrajectoryOptions options
+
+      cartographer_ros_msgs/SensorTopics topics
+
+      ---
+
+      cartographer_ros_msgs/StatusResponse status
+
+      int32 trajectory_id
+
+      '
+    version: 0
+  cartographer_ros_msgs/SubmapQuery: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/cartographer_ros_msgs/srv/SubmapQuery.srv
+    name: cartographer_ros_msgs/SubmapQuery
+    package: cartographer_ros_msgs
+    source: package_modeler
+    spec: '
+
+      # Copyright 2016 The Cartographer Authors
+
+      #
+
+      # Licensed under the Apache License, Version 2.0 (the "License");
+
+      # you may not use this file except in compliance with the License.
+
+      # You may obtain a copy of the License at
+
+      #
+
+      #      http://www.apache.org/licenses/LICENSE-2.0
+
+      #
+
+      # Unless required by applicable law or agreed to in writing, software
+
+      # distributed under the License is distributed on an "AS IS" BASIS,
+
+      # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+      # See the License for the specific language governing permissions and
+
+      # limitations under the License.
+
+
+      int32 trajectory_id
+
+      int32 submap_index
+
+      ---
+
+      cartographer_ros_msgs/StatusResponse status
+
+      int32 submap_version
+
+      cartographer_ros_msgs/SubmapTexture[] textures
+
+      '
+    version: 0
+  cartographer_ros_msgs/WriteState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/cartographer_ros_msgs/srv/WriteState.srv
+    name: cartographer_ros_msgs/WriteState
+    package: cartographer_ros_msgs
+    source: package_modeler
+    spec: '
+
+      # Copyright 2016 The Cartographer Authors
+
+      #
+
+      # Licensed under the Apache License, Version 2.0 (the "License");
+
+      # you may not use this file except in compliance with the License.
+
+      # You may obtain a copy of the License at
+
+      #
+
+      #      http://www.apache.org/licenses/LICENSE-2.0
+
+      #
+
+      # Unless required by applicable law or agreed to in writing, software
+
+      # distributed under the License is distributed on an "AS IS" BASIS,
+
+      # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+      # See the License for the specific language governing permissions and
+
+      # limitations under the License.
+
+
+      string filename
+
+      ---
+
+      cartographer_ros_msgs/StatusResponse status
+
+      '
+    version: 0
+  control_msgs/QueryCalibrationState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/control_msgs/srv/QueryCalibrationState.srv
+    name: control_msgs/QueryCalibrationState
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      bool is_calibrated'
+    version: 0
+  control_msgs/QueryTrajectoryState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/control_msgs/srv/QueryTrajectoryState.srv
+    name: control_msgs/QueryTrajectoryState
+    package: control_msgs
+    source: package_modeler
+    spec: '
+
+      time time
+
+      ---
+
+      string[] name
+
+      float64[] position
+
+      float64[] velocity
+
+      float64[] acceleration
+
+      '
+    version: 0
+  control_toolbox/SetPidGains: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/control_toolbox/srv/SetPidGains.srv
+    name: control_toolbox/SetPidGains
+    package: control_toolbox
+    source: package_modeler
+    spec: '
+
+      float64 p
+
+      float64 i
+
+      float64 d
+
+      float64 i_clamp
+
+      bool antiwindup
+
+      ---
+
+      '
+    version: 0
+  controller_manager_msgs/ListControllerTypes: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/controller_manager_msgs/srv/ListControllerTypes.srv
+    name: controller_manager_msgs/ListControllerTypes
+    package: controller_manager_msgs
+    source: package_modeler
+    spec: '
+
+      # The ListControllers service returns a list of controller types that are known
+
+      # to the controller manager plugin mechanism.
+
+
+      ---
+
+      string[] types
+
+      string[] base_classes
+
+      '
+    version: 0
+  controller_manager_msgs/ListControllers: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/controller_manager_msgs/srv/ListControllers.srv
+    name: controller_manager_msgs/ListControllers
+    package: controller_manager_msgs
+    source: package_modeler
+    spec: '
+
+      # The ListControllers service returns a list of controller names/states/types
+      of the
+
+      # controllers that are loaded inside the controller_manager.
+
+
+      ---
+
+      ControllerState[] controller
+
+      '
+    version: 0
+  controller_manager_msgs/LoadController: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/controller_manager_msgs/srv/LoadController.srv
+    name: controller_manager_msgs/LoadController
+    package: controller_manager_msgs
+    source: package_modeler
+    spec: "\n# The LoadController service allows you to load a single controller \n\
+      # inside controller_manager\n\n# To load a controller, specify the \"name\"\
+      \ of the controller. \n# The return value \"ok\" indicates if the controller\
+      \ was successfully\n# constructed and initialized or not.\n\nstring name\n---\n\
+      bool ok"
+    version: 0
+  controller_manager_msgs/ReloadControllerLibraries: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/controller_manager_msgs/srv/ReloadControllerLibraries.srv
+    name: controller_manager_msgs/ReloadControllerLibraries
+    package: controller_manager_msgs
+    source: package_modeler
+    spec: '
+
+      # The ReloadControllerLibraries service will reload all controllers that are
+      available in
+
+      # the system as plugins
+
+
+
+      # Reloading libraries only works if there are no controllers loaded. If there
+
+      # are still some controllers loaded, the reloading will fail.
+
+      # If this bool is set to true, all loaded controllers will get
+
+      # killed automatically, and the reloading can succeed.
+
+      bool force_kill
+
+      ---
+
+      bool ok
+
+      '
+    version: 0
+  controller_manager_msgs/SwitchController: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/controller_manager_msgs/srv/SwitchController.srv
+    name: controller_manager_msgs/SwitchController
+    package: controller_manager_msgs
+    source: package_modeler
+    spec: '
+
+      # The SwitchController service allows you stop a number of controllers
+
+      # and start a number of controllers, all in one single timestep of the
+
+      # controller_manager control loop.
+
+
+      # To switch controllers, specify
+
+      #  * the list of controller names to start,
+
+      #  * the list of controller names to stop, and
+
+      #  * the strictness (BEST_EFFORT or STRICT)
+
+      #    * STRICT means that switching will fail if anything goes wrong (an invalid
+
+      #      controller name, a controller that failed to start, etc. )
+
+      #    * BEST_EFFORT means that even when something goes wrong with on controller,
+
+      #      the service will still try to start/stop the remaining controllers
+
+      #  * start the controllers as soon as their hardware dependencies are ready,
+      will
+
+      #    wait for all interfaces to be ready otherwise
+
+      #  * the timeout in seconds before aborting pending controllers. Zero for infinite
+
+
+      # The return value "ok" indicates if the controllers were switched
+
+      # successfully or not.  The meaning of success depends on the
+
+      # specified strictness.
+
+
+
+      string[] start_controllers
+
+      string[] stop_controllers
+
+      int32 strictness
+
+      int32 BEST_EFFORT=1
+
+      int32 STRICT=2
+
+      bool start_asap
+
+      float64 timeout
+
+      ---
+
+      bool ok
+
+      '
+    version: 0
+  controller_manager_msgs/UnloadController: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/controller_manager_msgs/srv/UnloadController.srv
+    name: controller_manager_msgs/UnloadController
+    package: controller_manager_msgs
+    source: package_modeler
+    spec: "\n# The UnloadController service allows you to unload a single controller\
+      \ \n# from controller_manager\n\n# To unload a controller, specify the \"name\"\
+      \ of the controller. \n# The return value \"ok\" indicates if the controller\
+      \ was successfully\n# unloaded or not\n\nstring name\n---\nbool ok"
+    version: 0
+  diagnostic_msgs/AddDiagnostics: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/diagnostic_msgs/srv/AddDiagnostics.srv
+    name: diagnostic_msgs/AddDiagnostics
+    package: diagnostic_msgs
+    source: package_modeler
+    spec: '
+
+      # This service is used as part of the process for loading analyzers at runtime,
+
+      # and should be used by a loader script or program, not as a standalone service.
+
+      # Information about dynamic addition of analyzers can be found at
+
+      # http://wiki.ros.org/diagnostics/Tutorials/Adding%20Analyzers%20at%20Runtime
+
+
+      # The load_namespace parameter defines the namespace where parameters for the
+
+      # initialization of analyzers in the diagnostic aggregator have been loaded.
+      The
+
+      # value should be a global name (i.e. /my/name/space), not a relative
+
+      # (my/name/space) or private (~my/name/space) name. Analyzers will not be added
+
+      # if a non-global name is used. The call will also fail if the namespace
+
+      # contains parameters that follow a namespace structure that does not conform
+      to
+
+      # that expected by the analyzer definitions. See
+
+      # http://wiki.ros.org/diagnostics/Tutorials/Configuring%20Diagnostic%20Aggregators
+
+      # and http://wiki.ros.org/diagnostics/Tutorials/Using%20the%20GenericAnalyzer
+
+      # for examples of the structure of yaml files which are expected to have been
+
+      # loaded into the namespace.
+
+      string load_namespace
+
+      ---
+
+
+      # True if diagnostic aggregator was updated with new diagnostics, False
+
+      # otherwise. A false return value means that either there is a bond in the
+
+      # aggregator which already used the requested namespace, or the initialization
+
+      # of analyzers failed.
+
+      bool success
+
+
+      # Message with additional information about the success or failure
+
+      string message
+
+      '
+    version: 0
+  diagnostic_msgs/SelfTest: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/diagnostic_msgs/srv/SelfTest.srv
+    name: diagnostic_msgs/SelfTest
+    package: diagnostic_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      string id
+
+      byte passed
+
+      DiagnosticStatus[] status
+
+      '
+    version: 0
+  dynamic_reconfigure/Reconfigure: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/dynamic_reconfigure/srv/Reconfigure.srv
+    name: dynamic_reconfigure/Reconfigure
+    package: dynamic_reconfigure
+    source: package_modeler
+    spec: '
+
+      Config config
+
+      ---
+
+      Config config
+
+      '
+    version: 0
+  gazebo_msgs/ApplyBodyWrench: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/ApplyBodyWrench.srv
+    name: gazebo_msgs/ApplyBodyWrench
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\n# Apply Wrench to Gazebo Body.\n# via the callback mechanism\n# all Gazebo\
+      \ operations are made in world frame\nstring body_name                     \
+      \     # Gazebo body to apply wrench (linear force and torque)\n            \
+      \                              # wrench is applied in the gazebo world by default\n\
+      \                                          # body names are prefixed by model\
+      \ name, e.g. pr2::base_link\nstring reference_frame                    # wrench\
+      \ is defined in the reference frame of this entity\n                       \
+      \                   # use inertial frame if left empty\n                   \
+      \                       # frame names are bodies prefixed by model name, e.g.\
+      \ pr2::base_link\ngeometry_msgs/Point  reference_point      # wrench is defined\
+      \ at this location in the reference frame\ngeometry_msgs/Wrench wrench     \
+      \          # wrench applied to the origin of the body\ntime start_time     \
+      \                      # (optional) wrench application start time (seconds)\n\
+      \                                          # if start_time is not specified,\
+      \ or\n                                          # start_time < current time,\
+      \ start as soon as possible\nduration duration                         # optional\
+      \ duration of wrench application time (seconds)\n                          \
+      \                # if duration < 0, apply wrench continuously without end\n\
+      \                                          # if duration = 0, do nothing\n \
+      \                                         # if duration < step size, apply wrench\n\
+      \                                          # for one step size\n---\nbool success\
+      \                              # return true if set wrench successful\nstring\
+      \ status_message                     # comments if available\n"
+    version: 0
+  gazebo_msgs/ApplyJointEffort: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/ApplyJointEffort.srv
+    name: gazebo_msgs/ApplyJointEffort
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\n# set urdf joint effort\nstring joint_name           # joint to apply\
+      \ wrench (linear force and torque)\nfloat64 effort              # effort to\
+      \ apply\ntime start_time             # optional wrench application start time\
+      \ (seconds)\n                            # if start_time < current time, start\
+      \ as soon as possible\nduration duration           # optional duration of wrench\
+      \ application time (seconds)\n                            # if duration < 0,\
+      \ apply wrench continuously without end\n                            # if duration\
+      \ = 0, do nothing\n                            # if duration < step size, assume\
+      \ step size and\n                            #               display warning\
+      \ in status_message\n---\nbool success                # return true if effort\
+      \ application is successful\nstring status_message       # comments if available\n"
+    version: 0
+  gazebo_msgs/BodyRequest: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/BodyRequest.srv
+    name: gazebo_msgs/BodyRequest
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string body_name   # name of the body requested. body names are prefixed by
+      model name, e.g. pr2::base_link
+
+      ---
+
+      '
+    version: 0
+  gazebo_msgs/DeleteLight: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/DeleteLight.srv
+    name: gazebo_msgs/DeleteLight
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string light_name                 # name of the light to be deleted
+
+      ---
+
+      bool success                      # return true if deletion is successful
+
+      string status_message             # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/DeleteModel: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/DeleteModel.srv
+    name: gazebo_msgs/DeleteModel
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string model_name                 # name of the Gazebo Model to be deleted
+
+      ---
+
+      bool success                      # return true if deletion is successful
+
+      string status_message             # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/GetJointProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetJointProperties.srv
+    name: gazebo_msgs/GetJointProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string joint_name                    # name of joint
+
+      ---
+
+      # joint type
+
+      uint8 type
+
+      uint8 REVOLUTE    = 0                # single DOF
+
+      uint8 CONTINUOUS  = 1                # single DOF (revolute w/o joints)
+
+      uint8 PRISMATIC   = 2                # single DOF
+
+      uint8 FIXED       = 3                # 0 DOF
+
+      uint8 BALL        = 4                # 3 DOF
+
+      uint8 UNIVERSAL   = 5                # 2 DOF
+
+      # dynamics properties
+
+      float64[] damping
+
+      # joint state
+
+      float64[] position
+
+      float64[] rate
+
+      # service return status
+
+      bool success                         # return true if get successful
+
+      string status_message                # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/GetLightProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetLightProperties.srv
+    name: gazebo_msgs/GetLightProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string light_name                    # name of Gazebo Light
+
+      ---
+
+      std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha
+
+      float64 attenuation_constant
+
+      float64 attenuation_linear
+
+      float64 attenuation_quadratic
+
+      bool success                         # return true if get successful
+
+      string status_message                # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/GetLinkProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetLinkProperties.srv
+    name: gazebo_msgs/GetLinkProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\nstring link_name          # name of link\n                          #\
+      \ link names are prefixed by model name, e.g. pr2::base_link\n---\ngeometry_msgs/Pose\
+      \ com    # center of mass location in link frame\n                         \
+      \ # and orientation of the moment of inertias\n                          # relative\
+      \ to the link frame\nbool gravity_mode         # set gravity mode on/off\nfloat64\
+      \ mass              # linear mass of link\nfloat64 ixx               # moment\
+      \ of inertia\nfloat64 ixy               # moment of inertia\nfloat64 ixz   \
+      \            # moment of inertia\nfloat64 iyy               # moment of inertia\n\
+      float64 iyz               # moment of inertia\nfloat64 izz               # moment\
+      \ of inertia\nbool success              # return true if get info is successful\n\
+      string status_message     # comments if available\n"
+    version: 0
+  gazebo_msgs/GetLinkState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetLinkState.srv
+    name: gazebo_msgs/GetLinkState
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\nstring link_name          # name of link\n                          #\
+      \ link names are prefixed by model name, e.g. pr2::base_link\nstring reference_frame\
+      \    # reference frame of returned information, must be a valid link\n     \
+      \                     # if empty, use inertial (gazebo world) frame\n      \
+      \                    # reference_frame names are prefixed by model name, e.g.\
+      \ pr2::base_link\n---\ngazebo_msgs/LinkState link_state\nbool success      \
+      \        # return true if get info is successful\nstring status_message    \
+      \ # comments if available\n"
+    version: 0
+  gazebo_msgs/GetModelProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetModelProperties.srv
+    name: gazebo_msgs/GetModelProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string model_name                    # name of Gazebo Model
+
+      ---
+
+      string parent_model_name             # parent model
+
+      string canonical_body_name           # name of canonical body, body names are
+      prefixed by model name, e.g. pr2::base_link
+
+      string[] body_names                  # list of bodies, body names are prefixed
+      by model name, e.g. pr2::base_link
+
+      string[] geom_names                  # list of geoms
+
+      string[] joint_names                 # list of joints attached to the model
+
+      string[] child_model_names           # list of child models
+
+      bool is_static                       # returns true if model is static
+
+      bool success                         # return true if get successful
+
+      string status_message                # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/GetModelState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetModelState.srv
+    name: gazebo_msgs/GetModelState
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\nstring model_name                    # name of Gazebo Model\nstring relative_entity_name\
+      \          # return pose and twist relative to this entity\n               \
+      \                      # an entity can be a model, body, or geom\n         \
+      \                            # be sure to use gazebo scoped naming notation\
+      \ (e.g. [model_name::body_name])\n                                     # leave\
+      \ empty or \"world\" will use inertial world frame\n---\nHeader header     \
+      \                   # Standard metadata for higher-level stamped data types.\n\
+      \                                     # * header.seq holds the number of requests\
+      \ since the plugin started\n                                     # * header.stamp\
+      \ timestamp related to the pose\n                                     # * header.frame_id\
+      \ not used but currently filled with the relative_entity_name\ngeometry_msgs/Pose\
+      \ pose              # pose of model in relative entity frame\ngeometry_msgs/Twist\
+      \ twist            # twist of model in relative entity frame\nbool success \
+      \                        # return true if get successful\nstring status_message\
+      \                # comments if available\n"
+    version: 0
+  gazebo_msgs/GetPhysicsProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetPhysicsProperties.srv
+    name: gazebo_msgs/GetPhysicsProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      # sets pose and twist of a link.  All children link poses/twists of the URDF
+      tree will be updated accordingly
+
+      float64 time_step                  # dt in seconds
+
+      bool pause                         # true if physics engine is paused
+
+      float64 max_update_rate            # throttle maximum physics update rate
+
+      geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])
+
+      gazebo_msgs/ODEPhysics ode_config  # contains physics configurations pertaining
+      to ODE
+
+      bool success                       # return true if set wrench successful
+
+      string status_message              # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/GetWorldProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/GetWorldProperties.srv
+    name: gazebo_msgs/GetWorldProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      float64 sim_time                     # current sim time
+
+      string[] model_names                 # list of models in the world
+
+      bool rendering_enabled               # If gazebo rendering engine is enabled,
+      currently always True
+
+      bool success                         # return true if get successful
+
+      string status_message                # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/JointRequest: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/JointRequest.srv
+    name: gazebo_msgs/JointRequest
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string joint_name   # name of the joint requested
+
+      ---
+
+
+      '
+    version: 0
+  gazebo_msgs/SetJointProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetJointProperties.srv
+    name: gazebo_msgs/SetJointProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string joint_name                               # name of joint
+
+      gazebo_msgs/ODEJointProperties ode_joint_config # access to ODE joint dynamics
+      properties
+
+      ---
+
+      bool success                                    # return true if get successful
+
+      string status_message                           # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SetJointTrajectory: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetJointTrajectory.srv
+    name: gazebo_msgs/SetJointTrajectory
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string model_name
+
+      trajectory_msgs/JointTrajectory joint_trajectory
+
+      geometry_msgs/Pose model_pose
+
+      bool set_model_pose
+
+      bool disable_physics_updates # defaults to false
+
+      ---
+
+      bool success                # return true if set wrench successful
+
+      string status_message       # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SetLightProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetLightProperties.srv
+    name: gazebo_msgs/SetLightProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      string light_name                    # name of Gazebo Light
+
+      std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha
+
+      float64 attenuation_constant
+
+      float64 attenuation_linear
+
+      float64 attenuation_quadratic
+
+      ---
+
+      bool success                         # return true if get successful
+
+      string status_message                # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SetLinkProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetLinkProperties.srv
+    name: gazebo_msgs/SetLinkProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\nstring link_name          # name of link\n                          #\
+      \ link names are prefixed by model name, e.g. pr2::base_link\ngeometry_msgs/Pose\
+      \ com    # center of mass location in link frame\n                         \
+      \ # and orientation of the moment of inertias\n                          # relative\
+      \ to the link frame\nbool gravity_mode         # set gravity mode on/off\nfloat64\
+      \ mass              # linear mass of link\nfloat64 ixx               # moment\
+      \ of inertia\nfloat64 ixy               # moment of inertia\nfloat64 ixz   \
+      \            # moment of inertia\nfloat64 iyy               # moment of inertia\n\
+      float64 iyz               # moment of inertia\nfloat64 izz               # moment\
+      \ of inertia\n---\nbool success              # return true if get info is successful\n\
+      string status_message     # comments if available\n"
+    version: 0
+  gazebo_msgs/SetLinkState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetLinkState.srv
+    name: gazebo_msgs/SetLinkState
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      gazebo_msgs/LinkState link_state
+
+      ---
+
+      bool success                # return true if set wrench successful
+
+      string status_message       # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SetModelConfiguration: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetModelConfiguration.srv
+    name: gazebo_msgs/SetModelConfiguration
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      # Set joint positions for a model
+
+      string model_name           # model to set state
+
+      string urdf_param_name      # UNUSED
+
+
+      string[] joint_names        # list of joints to set positions.  if joint is
+      not listed here, preserve current position.
+
+      float64[] joint_positions   # set to this position.
+
+      ---
+
+      bool success                # return true if setting state successful
+
+      string status_message       # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SetModelState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetModelState.srv
+    name: gazebo_msgs/SetModelState
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      gazebo_msgs/ModelState model_state
+
+      ---
+
+      bool success                  # return true if setting state successful
+
+      string status_message         # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SetPhysicsProperties: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SetPhysicsProperties.srv
+    name: gazebo_msgs/SetPhysicsProperties
+    package: gazebo_msgs
+    source: package_modeler
+    spec: '
+
+      # sets pose and twist of a link.  All children link poses/twists of the URDF
+      tree will be updated accordingly
+
+      float64 time_step                  # dt in seconds
+
+      float64 max_update_rate            # throttle maximum physics update rate
+
+      geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])
+
+      gazebo_msgs/ODEPhysics ode_config  # configurations for ODE
+
+      ---
+
+      bool success                       # return true if set wrench successful
+
+      string status_message              # comments if available
+
+      '
+    version: 0
+  gazebo_msgs/SpawnModel: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/gazebo_msgs/srv/SpawnModel.srv
+    name: gazebo_msgs/SpawnModel
+    package: gazebo_msgs
+    source: package_modeler
+    spec: "\nstring model_name                 # name of the model to be spawn\nstring\
+      \ model_xml                  # this should be an urdf or gazebo xml\nstring\
+      \ robot_namespace            # spawn robot and all ROS interfaces under this\
+      \ namespace\ngeometry_msgs/Pose initial_pose   # only applied to canonical body\n\
+      string reference_frame            # initial_pose is defined relative to the\
+      \ frame of this model/body\n                                  # if left empty\
+      \ or \"world\", then gazebo world frame is used\n                          \
+      \        # if non-existent model/body is specified, an error is returned\n \
+      \                                 #   and the model is not spawned\n---\nbool\
+      \ success                      # return true if spawn successful\nstring status_message\
+      \             # comments if available\n"
+    version: 0
+  geographic_msgs/GetGeoPath: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/geographic_msgs/srv/GetGeoPath.srv
+    name: geographic_msgs/GetGeoPath
+    package: geographic_msgs
+    source: package_modeler
+    spec: '
+
+      # Searches for given start and goal the nearest route segments
+
+      # and determine the path through the RouteNetwork
+
+
+      geographic_msgs/GeoPoint start        # starting point
+
+      geographic_msgs/GeoPoint goal         # goal point
+
+
+      ---
+
+
+      bool success                          # true if the call succeeded
+
+      string status                         # more details
+
+
+      geographic_msgs/GeoPath plan          # path to follow
+
+
+      uuid_msgs/UniqueID network            # the uuid of the RouteNetwork
+
+      uuid_msgs/UniqueID start_seg          # the uuid of the starting RouteSegment
+
+      uuid_msgs/UniqueID goal_seg           # the uuid of the ending RouteSegment
+
+      float64 distance                      # the length of the plan
+
+      '
+    version: 0
+  geographic_msgs/GetGeographicMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/geographic_msgs/srv/GetGeographicMap.srv
+    name: geographic_msgs/GetGeographicMap
+    package: geographic_msgs
+    source: package_modeler
+    spec: '
+
+      # This service requests a region of a geographic map.
+
+
+      string url            # where to read map data
+
+
+      # Bounding box for the desired map.  If all zeros, provide all data
+
+      # available from the specified URL.
+
+      BoundingBox bounds
+
+
+      ---
+
+
+      bool success          # true if the call succeeded
+
+      string status         # more details
+
+
+      # The requested map, its bounds may differ from the requested bounds.
+
+      GeographicMap map
+
+      '
+    version: 0
+  geographic_msgs/GetRoutePlan: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/geographic_msgs/srv/GetRoutePlan.srv
+    name: geographic_msgs/GetRoutePlan
+    package: geographic_msgs
+    source: package_modeler
+    spec: '
+
+      # Get a plan to traverse a route network from start to goal.
+
+      #
+
+      # Similar to nav_msgs/GetPlan, but constrained to use the route network.
+
+
+      uuid_msgs/UniqueID network      # route network to use
+
+      uuid_msgs/UniqueID start        # starting way point
+
+      uuid_msgs/UniqueID goal         # goal way point
+
+
+      ---
+
+
+      bool            success         # true if the call succeeded
+
+      string          status          # more details
+
+
+      RoutePath       plan            # path to follow
+
+      '
+    version: 0
+  geographic_msgs/UpdateGeographicMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/geographic_msgs/srv/UpdateGeographicMap.srv
+    name: geographic_msgs/UpdateGeographicMap
+    package: geographic_msgs
+    source: package_modeler
+    spec: '
+
+      # This service updates a geographic map.
+
+
+      # Changes to geographic map.
+
+      GeographicMapChanges updates
+
+
+      ---
+
+
+      bool   success        # true if the call succeeded
+
+      string status         # more details
+
+      '
+    version: 0
+  hector_gazebo_plugins/SetBias: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/hector_gazebo_plugins/srv/SetBias.srv
+    name: hector_gazebo_plugins/SetBias
+    package: hector_gazebo_plugins
+    source: package_modeler
+    spec: '
+
+      geometry_msgs/Vector3 bias
+
+      ---
+
+      '
+    version: 0
+  laser_assembler/AssembleScans: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/laser_assembler/srv/AssembleScans.srv
+    name: laser_assembler/AssembleScans
+    package: laser_assembler
+    source: package_modeler
+    spec: "\n# The time interval on which we want to aggregate scans\ntime begin\n\
+      # The end of the interval on which we want to assemble scans or clouds\ntime\
+      \ end\n---\n# The point cloud holding the assembled clouds or scans. \n# This\
+      \ cloud is in the frame specified by the ~fixed_frame node parameter. \n# cloud\
+      \ is empty if no scans are received in the requested interval.\nsensor_msgs/PointCloud\
+      \ cloud\n"
+    version: 0
+  laser_assembler/AssembleScans2: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/laser_assembler/srv/AssembleScans2.srv
+    name: laser_assembler/AssembleScans2
+    package: laser_assembler
+    source: package_modeler
+    spec: "\n# The time interval on which we want to aggregate scans\ntime begin\n\
+      # The end of the interval on which we want to assemble scans or clouds\ntime\
+      \ end\n---\n# The point cloud holding the assembled clouds or scans. \n# This\
+      \ cloud is in the frame specified by the ~fixed_frame node parameter. \n# cloud\
+      \ is empty if no scans are received in the requested interval.\nsensor_msgs/PointCloud2\
+      \ cloud\n"
+    version: 0
+  map_msgs/GetMapROI: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/map_msgs/srv/GetMapROI.srv
+    name: map_msgs/GetMapROI
+    package: map_msgs
+    source: package_modeler
+    spec: '
+
+      float64 x
+
+      float64 y
+
+      float64 l_x
+
+      float64 l_y
+
+      ---
+
+      nav_msgs/OccupancyGrid sub_map'
+    version: 0
+  map_msgs/GetPointMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/map_msgs/srv/GetPointMap.srv
+    name: map_msgs/GetPointMap
+    package: map_msgs
+    source: package_modeler
+    spec: "\n# Get the map as a sensor_msgs/PointCloud2 \n---\nsensor_msgs/PointCloud2\
+      \ map\n"
+    version: 0
+  map_msgs/GetPointMapROI: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/map_msgs/srv/GetPointMapROI.srv
+    name: map_msgs/GetPointMapROI
+    package: map_msgs
+    source: package_modeler
+    spec: '
+
+      float64 x
+
+      float64 y
+
+      float64 z
+
+      float64 r    # if != 0, circular ROI of radius r
+
+      float64 l_x  # if r == 0, length of AABB on x
+
+      float64 l_y  # if r == 0, length of AABB on y
+
+      float64 l_z  # if r == 0, length of AABB on z
+
+      ---
+
+      sensor_msgs/PointCloud2 sub_map'
+    version: 0
+  map_msgs/ProjectedMapsInfo: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/map_msgs/srv/ProjectedMapsInfo.srv
+    name: map_msgs/ProjectedMapsInfo
+    package: map_msgs
+    source: package_modeler
+    spec: '
+
+      map_msgs/ProjectedMapInfo[] projected_maps_info
+
+      '
+    version: 0
+  map_msgs/SaveMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/map_msgs/srv/SaveMap.srv
+    name: map_msgs/SaveMap
+    package: map_msgs
+    source: package_modeler
+    spec: "\n# Save the map to the filesystem\nstd_msgs/String filename \n"
+    version: 0
+  map_msgs/SetMapProjections: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/map_msgs/srv/SetMapProjections.srv
+    name: map_msgs/SetMapProjections
+    package: map_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      map_msgs/ProjectedMapInfo[] projected_maps_info
+
+      '
+    version: 0
+  moveit_msgs/ApplyPlanningScene: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/ApplyPlanningScene.srv
+    name: moveit_msgs/ApplyPlanningScene
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      PlanningScene scene
+
+      ---
+
+      bool success
+
+      '
+    version: 0
+  moveit_msgs/ChangeControlDimensions: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/ChangeControlDimensions.srv
+    name: moveit_msgs/ChangeControlDimensions
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # For use with moveit_jog_arm Cartesian planner
+
+      #
+
+      # Turn on/off jogging along these dimensions.
+
+      # Give ''true'' to enable jogging in the direction, ''false'' to disable
+
+      bool control_x_translation
+
+      bool control_y_translation
+
+      bool control_z_translation
+
+      bool control_x_rotation
+
+      bool control_y_rotation
+
+      bool control_z_rotation
+
+      ---
+
+      bool success
+
+      '
+    version: 0
+  moveit_msgs/ChangeDriftDimensions: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/ChangeDriftDimensions.srv
+    name: moveit_msgs/ChangeDriftDimensions
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # For use with moveit_jog_arm Cartesian planner
+
+      #
+
+      # Allow the robot to drift along these dimensions in a smooth but unregulated
+      way.
+
+      # Give ''true'' to enable drift in the direction, ''false'' to disable.
+
+      # For example, may allow wrist rotation by drift_x_rotation == true.
+
+      bool drift_x_translation
+
+      bool drift_y_translation
+
+      bool drift_z_translation
+
+      bool drift_x_rotation
+
+      bool drift_y_rotation
+
+      bool drift_z_rotation
+
+
+      # Not implemented as of Jan 2020 (for now assumed to be the identity matrix).
+      In the future it will allow us to transform
+
+      # from the jog control frame to a unique drift frame, so the robot can drift
+      along off-principal axes
+
+      geometry_msgs/Transform transform_jog_frame_to_drift_frame
+
+      ---
+
+      bool success
+
+      '
+    version: 0
+  moveit_msgs/CheckIfRobotStateExistsInWarehouse: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/CheckIfRobotStateExistsInWarehouse.srv
+    name: moveit_msgs/CheckIfRobotStateExistsInWarehouse
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string name
+
+      string robot
+
+
+      ---
+
+
+      bool exists
+
+      '
+    version: 0
+  moveit_msgs/DeleteRobotStateFromWarehouse: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/DeleteRobotStateFromWarehouse.srv
+    name: moveit_msgs/DeleteRobotStateFromWarehouse
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string name
+
+      string robot
+
+
+      ---
+
+      '
+    version: 0
+  moveit_msgs/ExecuteKnownTrajectory: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/ExecuteKnownTrajectory.srv
+    name: moveit_msgs/ExecuteKnownTrajectory
+    package: moveit_msgs
+    source: package_modeler
+    spec: "\n# This service is deprecated and will go away at some point. For new\
+      \ development use the ExecuteTrajectory action.\n# Effective since: Indigo 0.7.4,\
+      \ Jade and Kinetic 0.8.3\n\n# The trajectory to execute \nRobotTrajectory trajectory\n\
+      \n# Set this to true if the service should block until the execution is complete\n\
+      bool wait_for_execution\n\n---\n\n# Error code - encodes the overall reason\
+      \ for failure\nMoveItErrorCodes error_code\n"
+    version: 0
+  moveit_msgs/GetCartesianPath: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetCartesianPath.srv
+    name: moveit_msgs/GetCartesianPath
+    package: moveit_msgs
+    source: package_modeler
+    spec: "\n# Define the frame for the specified waypoints\nHeader header\n\n# The\
+      \ start at which to start the Cartesian path\nRobotState start_state\n\n# Mandatory\
+      \ name of group to compute the path for\nstring group_name\n\n# Optional name\
+      \ of IK link for which waypoints are specified.\n# If not specified, the tip\
+      \ of the group (which is assumed to be a chain)\n# is assumed to be the link\n\
+      string link_name\n\n# A sequence of waypoints to be followed by the specified\
+      \ link, \n# while moving the specified group, such that the group moves only\n\
+      # in a straight line between waypoints\ngeometry_msgs/Pose[] waypoints\n\n#\
+      \ The maximum distance (in Cartesian space) between consecutive points\n# in\
+      \ the returned path. This must always be specified and > 0\nfloat64 max_step\n\
+      \n# If above 0, this value is assumed to be the maximum allowed distance \n\
+      # (L infinity) in configuration space, between consecutive points.\n# If this\
+      \ distance is found to be above the maximum threshold, the path \n# computation\
+      \ fails.\nfloat64 jump_threshold\n\n# Set to true if collisions should be avoided\
+      \ when possible\nbool avoid_collisions\n\n# Specify additional constraints to\
+      \ be met by the Cartesian path\nConstraints path_constraints\n\n---\n\n# The\
+      \ state at which the computed path starts\nRobotState start_state\n\n# The computed\
+      \ solution trajectory, for the desired group, in configuration space\nRobotTrajectory\
+      \ solution\n\n# If the computation was incomplete, this value indicates the\
+      \ fraction of the path\n# that was in fact computed (nr of waypoints traveled\
+      \ through)\nfloat64 fraction\n\n# The error code of the computation\nMoveItErrorCodes\
+      \ error_code\n"
+    version: 0
+  moveit_msgs/GetMotionPlan: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetMotionPlan.srv
+    name: moveit_msgs/GetMotionPlan
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # This service contains the definition for a request to the motion
+
+      # planner and the output it provides
+
+
+      MotionPlanRequest motion_plan_request
+
+
+      ---
+
+
+      MotionPlanResponse motion_plan_response
+
+      '
+    version: 0
+  moveit_msgs/GetMotionSequence: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetMotionSequence.srv
+    name: moveit_msgs/GetMotionSequence
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # Planning request with a list of motion commands
+
+      MotionSequenceRequest request
+
+
+      ---
+
+      # Response to the planning request
+
+      MotionSequenceResponse response
+
+      '
+    version: 0
+  moveit_msgs/GetPlannerParams: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetPlannerParams.srv
+    name: moveit_msgs/GetPlannerParams
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # Name of planning config
+
+      string planner_config
+
+
+      # Optional name of planning group (return global defaults if empty)
+
+      string group
+
+
+      ---
+
+
+      # parameters as key-value pairs
+
+      PlannerParams params
+
+      '
+    version: 0
+  moveit_msgs/GetPlanningScene: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetPlanningScene.srv
+    name: moveit_msgs/GetPlanningScene
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # Get parts of the planning scene that are of interest
+
+      # All scene components are returned if none are specified
+
+      PlanningSceneComponents components
+
+      ---
+
+      PlanningScene scene
+
+      '
+    version: 0
+  moveit_msgs/GetPositionFK: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetPositionFK.srv
+    name: moveit_msgs/GetPositionFK
+    package: moveit_msgs
+    source: package_modeler
+    spec: "\n# A service definition for a standard forward kinematics service\n# The\
+      \ frame_id in the header message is the frame in which \n# the forward kinematics\
+      \ poses will be returned\nHeader header\n\n# A vector of link name for which\
+      \ forward kinematics must be computed\nstring[] fk_link_names\n\n# A robot state\
+      \ consisting of joint names and joint positions to be used for forward kinematics\n\
+      RobotState robot_state\n---\n# The resultant vector of PoseStamped messages\
+      \ that contains the (stamped) poses of the requested links\ngeometry_msgs/PoseStamped[]\
+      \ pose_stamped\n\n# The list of link names corresponding to the poses\nstring[]\
+      \ fk_link_names\n\nMoveItErrorCodes error_code\n"
+    version: 0
+  moveit_msgs/GetPositionIK: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetPositionIK.srv
+    name: moveit_msgs/GetPositionIK
+    package: moveit_msgs
+    source: package_modeler
+    spec: "\n# A service call to carry out an inverse kinematics computation\n# The\
+      \ inverse kinematics request\nPositionIKRequest ik_request\n\n---\n\n# The returned\
+      \ solution \n# (in the same order as the list of joints specified in the IKRequest\
+      \ message)\nRobotState solution\n\nMoveItErrorCodes error_code\n"
+    version: 0
+  moveit_msgs/GetRobotStateFromWarehouse: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetRobotStateFromWarehouse.srv
+    name: moveit_msgs/GetRobotStateFromWarehouse
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string name
+
+      string robot
+
+
+      ---
+
+
+      moveit_msgs/RobotState state
+
+      '
+    version: 0
+  moveit_msgs/GetStateValidity: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GetStateValidity.srv
+    name: moveit_msgs/GetStateValidity
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      RobotState robot_state
+
+      string group_name
+
+      Constraints constraints
+
+
+      ---
+
+
+      bool valid
+
+      ContactInformation[] contacts
+
+      CostSource[] cost_sources
+
+      ConstraintEvalResult[] constraint_result
+
+      '
+    version: 0
+  moveit_msgs/GraspPlanning: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/GraspPlanning.srv
+    name: moveit_msgs/GraspPlanning
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # Requests that grasp planning be performed for the target object
+
+      # returns a list of candidate grasps to be tested and executed
+
+
+      # the planning group used
+
+      string group_name
+
+
+      # the object to be grasped
+
+      CollisionObject target
+
+
+      # the names of the relevant support surfaces (e.g. tables) in the collision
+      map
+
+      # can be left empty if no names are available
+
+      string[] support_surfaces
+
+
+      # an optional list of grasps to be evaluated by the planner
+
+      Grasp[] candidate_grasps
+
+
+      # an optional list of obstacles that we have semantic information about
+
+      # and that can be moved in the course of grasping
+
+      CollisionObject[] movable_obstacles
+
+
+      ---
+
+
+      # the list of planned grasps
+
+      Grasp[] grasps
+
+
+      # whether an error occurred
+
+      MoveItErrorCodes error_code
+
+      '
+    version: 0
+  moveit_msgs/ListRobotStatesInWarehouse: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/ListRobotStatesInWarehouse.srv
+    name: moveit_msgs/ListRobotStatesInWarehouse
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string regex
+
+      string robot
+
+
+      ---
+
+
+      string[] states
+
+      '
+    version: 0
+  moveit_msgs/LoadMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/LoadMap.srv
+    name: moveit_msgs/LoadMap
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string filename
+
+      ---
+
+      bool success'
+    version: 0
+  moveit_msgs/QueryPlannerInterfaces: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/QueryPlannerInterfaces.srv
+    name: moveit_msgs/QueryPlannerInterfaces
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+
+      # The planning instances that could be used in the benchmark
+
+      PlannerInterfaceDescription[] planner_interfaces
+
+      '
+    version: 0
+  moveit_msgs/RenameRobotStateInWarehouse: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/RenameRobotStateInWarehouse.srv
+    name: moveit_msgs/RenameRobotStateInWarehouse
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string old_name
+
+      string new_name
+
+      string robot
+
+      ---
+
+      '
+    version: 0
+  moveit_msgs/SaveMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/SaveMap.srv
+    name: moveit_msgs/SaveMap
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string filename
+
+
+      ---
+
+
+      bool success
+
+
+
+      '
+    version: 0
+  moveit_msgs/SaveRobotStateToWarehouse: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/SaveRobotStateToWarehouse.srv
+    name: moveit_msgs/SaveRobotStateToWarehouse
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      string name
+
+      string robot
+
+      moveit_msgs/RobotState state
+
+
+      ---
+
+
+      bool success
+
+      '
+    version: 0
+  moveit_msgs/SetPlannerParams: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/moveit_msgs/srv/SetPlannerParams.srv
+    name: moveit_msgs/SetPlannerParams
+    package: moveit_msgs
+    source: package_modeler
+    spec: '
+
+      # Name of planning config
+
+      string planner_config
+
+
+      # Optional name of planning group (set global defaults if empty)
+
+      string group
+
+
+      # parameters as key-value pairs
+
+      PlannerParams params
+
+
+      # replace params or augment existing ones?
+
+      bool replace
+
+
+      ---
+
+
+      '
+    version: 0
+  nav_msgs/GetMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/nav_msgs/srv/GetMap.srv
+    name: nav_msgs/GetMap
+    package: nav_msgs
+    source: package_modeler
+    spec: '
+
+      # Get the map as a nav_msgs/OccupancyGrid
+
+      ---
+
+      nav_msgs/OccupancyGrid map
+
+      '
+    version: 0
+  nav_msgs/GetPlan: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/nav_msgs/srv/GetPlan.srv
+    name: nav_msgs/GetPlan
+    package: nav_msgs
+    source: package_modeler
+    spec: "\n# Get a plan from the current position to the goal Pose \n\n# The start\
+      \ pose for the plan\ngeometry_msgs/PoseStamped start\n\n# The final pose of\
+      \ the goal position\ngeometry_msgs/PoseStamped goal\n\n# If the goal is obstructed,\
+      \ how many meters the planner can \n# relax the constraint in x and y before\
+      \ failing. \nfloat32 tolerance\n---\nnav_msgs/Path plan\n"
+    version: 0
+  nav_msgs/SetMap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/nav_msgs/srv/SetMap.srv
+    name: nav_msgs/SetMap
+    package: nav_msgs
+    source: package_modeler
+    spec: '
+
+      # Set a new map together with an initial pose
+
+      nav_msgs/OccupancyGrid map
+
+      geometry_msgs/PoseWithCovarianceStamped initial_pose
+
+      ---
+
+      bool success
+
+
+      '
+    version: 0
+  navfn/MakeNavPlan: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/navfn/srv/MakeNavPlan.srv
+    name: navfn/MakeNavPlan
+    package: navfn
+    source: package_modeler
+    spec: '
+
+      geometry_msgs/PoseStamped start
+
+      geometry_msgs/PoseStamped goal
+
+      ---
+
+
+      uint8 plan_found
+
+      string error_message
+
+
+      # if plan_found is true, this is an array of waypoints from start to goal, where
+      the first one equals start and the last one equals goal
+
+      geometry_msgs/PoseStamped[] path
+
+      '
+    version: 0
+  navfn/SetCostmap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/navfn/srv/SetCostmap.srv
+    name: navfn/SetCostmap
+    package: navfn
+    source: package_modeler
+    spec: '
+
+      uint8[] costs
+
+      uint16 height
+
+      uint16 width
+
+      ---'
+    version: 0
+  nodelet/NodeletList: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/nodelet/srv/NodeletList.srv
+    name: nodelet/NodeletList
+    package: nodelet
+    source: package_modeler
+    spec: '
+
+      ---
+
+      string[] nodelets
+
+      '
+    version: 0
+  nodelet/NodeletLoad: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/nodelet/srv/NodeletLoad.srv
+    name: nodelet/NodeletLoad
+    package: nodelet
+    source: package_modeler
+    spec: '
+
+      string name
+
+      string type
+
+      string[] remap_source_args
+
+      string[] remap_target_args
+
+      string[] my_argv
+
+
+      string bond_id
+
+      ---
+
+      bool success
+
+      '
+    version: 0
+  nodelet/NodeletUnload: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/nodelet/srv/NodeletUnload.srv
+    name: nodelet/NodeletUnload
+    package: nodelet
+    source: package_modeler
+    spec: '
+
+      string name
+
+      ---
+
+      bool success
+
+      '
+    version: 0
+  object_recognition_msgs/GetObjectInformation: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/object_recognition_msgs/srv/GetObjectInformation.srv
+    name: object_recognition_msgs/GetObjectInformation
+    package: object_recognition_msgs
+    source: package_modeler
+    spec: "\n# Retrieve extra data from the DB for a given object\n\n# The type of\
+      \ the object to retrieve info from\nobject_recognition_msgs/ObjectType type\n\
+      \n---\n\n# Extra object info \nobject_recognition_msgs/ObjectInformation information\n"
+    version: 0
+  octomap_msgs/BoundingBoxQuery: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/octomap_msgs/srv/BoundingBoxQuery.srv
+    name: octomap_msgs/BoundingBoxQuery
+    package: octomap_msgs
+    source: package_modeler
+    spec: '
+
+      # Clear a region specified by a global axis-aligned bounding box in stored OctoMap
+
+
+      # minimum corner point of axis-aligned bounding box in global frame
+
+      geometry_msgs/Point min
+
+      # maximum corner point of axis-aligned bounding box in global frame
+
+      geometry_msgs/Point max
+
+      ---
+
+
+      '
+    version: 0
+  octomap_msgs/GetOctomap: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/octomap_msgs/srv/GetOctomap.srv
+    name: octomap_msgs/GetOctomap
+    package: octomap_msgs
+    source: package_modeler
+    spec: '
+
+      # Get the map as a octomap
+
+      ---
+
+      octomap_msgs/Octomap map
+
+      '
+    version: 0
+  polled_camera/GetPolledImage: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/polled_camera/srv/GetPolledImage.srv
+    name: polled_camera/GetPolledImage
+    package: polled_camera
+    source: package_modeler
+    spec: "\n# Namespace to publish response topics in. A polled camera driver node\n\
+      # should publish:\n#   <response_namespace>/image_raw\n#   <response_namespace>/camera_info\n\
+      string response_namespace\n\n# Timeout for attempting to capture data from the\
+      \ device. This does not\n# include latency from ROS communication, post-processing\
+      \ of raw camera\n# data, etc. A zero duration indicates no time limit.\nduration\
+      \ timeout\n\n# Binning settings, if supported by the camera.\nuint32 binning_x\n\
+      uint32 binning_y\n\n# Region of interest, if supported by the camera.\nsensor_msgs/RegionOfInterest\
+      \ roi\n---\nbool success          # Could the image be captured?\nstring status_message\
+      \ # Error message in case of failure\ntime stamp            # Timestamp of the\
+      \ captured image. Can be matched\n                      # against incoming sensor_msgs/Image\
+      \ header.\n"
+    version: 0
+  robot_localization/FromLL: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_localization/srv/FromLL.srv
+    name: robot_localization/FromLL
+    package: robot_localization
+    source: package_modeler
+    spec: '
+
+      geographic_msgs/GeoPoint ll_point
+
+      ---
+
+      geometry_msgs/Point map_point
+
+      '
+    version: 0
+  robot_localization/GetState: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_localization/srv/GetState.srv
+    name: robot_localization/GetState
+    package: robot_localization
+    source: package_modeler
+    spec: '
+
+      time time_stamp
+
+      string frame_id
+
+      ---
+
+      # State vector: x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw,
+      ax, ay, az
+
+      float64[15] state
+
+
+      # Covariance matrix in row-major order
+
+      float64[225] covariance
+
+      '
+    version: 0
+  robot_localization/SetDatum: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_localization/srv/SetDatum.srv
+    name: robot_localization/SetDatum
+    package: robot_localization
+    source: package_modeler
+    spec: '
+
+      geographic_msgs/GeoPose geo_pose
+
+      ---
+
+      '
+    version: 0
+  robot_localization/SetPose: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_localization/srv/SetPose.srv
+    name: robot_localization/SetPose
+    package: robot_localization
+    source: package_modeler
+    spec: '
+
+      geometry_msgs/PoseWithCovarianceStamped pose
+
+      ---
+
+      '
+    version: 0
+  robot_localization/ToLL: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_localization/srv/ToLL.srv
+    name: robot_localization/ToLL
+    package: robot_localization
+    source: package_modeler
+    spec: '
+
+      geometry_msgs/Point map_point
+
+      ---
+
+      geographic_msgs/GeoPoint ll_point
+
+      '
+    version: 0
+  robot_localization/ToggleFilterProcessing: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_localization/srv/ToggleFilterProcessing.srv
+    name: robot_localization/ToggleFilterProcessing
+    package: robot_localization
+    source: package_modeler
+    spec: '
+
+      bool on
+
+      ---
+
+      bool status
+
+      '
+    version: 0
+  robot_pose_ekf/GetStatus: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/robot_pose_ekf/srv/GetStatus.srv
+    name: robot_pose_ekf/GetStatus
+    package: robot_pose_ekf
+    source: package_modeler
+    spec: '
+
+
+      ---
+
+      string status'
+    version: 0
+  roscpp/Empty: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/roscpp/srv/Empty.srv
+    name: roscpp/Empty
+    package: roscpp
+    source: package_modeler
+    spec: '
+
+      ---'
+    version: 0
+  roscpp/GetLoggers: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/roscpp/srv/GetLoggers.srv
+    name: roscpp/GetLoggers
+    package: roscpp
+    source: package_modeler
+    spec: '
+
+      ---
+
+      Logger[] loggers'
+    version: 0
+  roscpp/SetLoggerLevel: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/roscpp/srv/SetLoggerLevel.srv
+    name: roscpp/SetLoggerLevel
+    package: roscpp
+    source: package_modeler
+    spec: '
+
+      string logger
+
+      string level
+
+      ---'
+    version: 0
+  roscpp_tutorials/TwoInts: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/roscpp_tutorials/srv/TwoInts.srv
+    name: roscpp_tutorials/TwoInts
+    package: roscpp_tutorials
+    source: package_modeler
+    spec: '
+
+      int64 a
+
+      int64 b
+
+      ---
+
+      int64 sum
+
+      '
+    version: 0
+  rospy_tutorials/AddTwoInts: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/rospy_tutorials/srv/AddTwoInts.srv
+    name: rospy_tutorials/AddTwoInts
+    package: rospy_tutorials
+    source: package_modeler
+    spec: '
+
+      int64 a
+
+      int64 b
+
+      ---
+
+      int64 sum
+
+      '
+    version: 0
+  rospy_tutorials/BadTwoInts: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/rospy_tutorials/srv/BadTwoInts.srv
+    name: rospy_tutorials/BadTwoInts
+    package: rospy_tutorials
+    source: package_modeler
+    spec: '
+
+      # Bad version of AddTwoInts for unit testing
+
+      int64 a
+
+      int32 b
+
+      ---
+
+      int32 sum
+
+      '
+    version: 0
+  rosserial_msgs/RequestMessageInfo: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/rosserial_msgs/srv/RequestMessageInfo.srv
+    name: rosserial_msgs/RequestMessageInfo
+    package: rosserial_msgs
+    source: package_modeler
+    spec: "\n# Full message datatype, eg \"std_msgs/String\"\nstring type\n---\n#\
+      \ If found, return md5 string of system's version of the message, and \n# textual\
+      \ definition. If not found, both strings are to be empty.\nstring md5\nstring\
+      \ definition\n"
+    version: 0
+  rosserial_msgs/RequestParam: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/rosserial_msgs/srv/RequestParam.srv
+    name: rosserial_msgs/RequestParam
+    package: rosserial_msgs
+    source: package_modeler
+    spec: '
+
+      string name
+
+
+      ---
+
+
+      int32[]   ints
+
+      float32[] floats
+
+      string[]  strings
+
+      '
+    version: 0
+  rosserial_msgs/RequestServiceInfo: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/rosserial_msgs/srv/RequestServiceInfo.srv
+    name: rosserial_msgs/RequestServiceInfo
+    package: rosserial_msgs
+    source: package_modeler
+    spec: '
+
+      # service name
+
+      string service
+
+      ---
+
+      string service_md5
+
+      string request_md5
+
+      string response_md5
+
+      '
+    version: 0
+  rviz/SendFilePath: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/rviz/srv/SendFilePath.srv
+    name: rviz/SendFilePath
+    package: rviz
+    source: package_modeler
+    spec: '
+
+      std_msgs/String path # absolute path to file or directory
+
+      ---
+
+      bool success
+
+      '
+    version: 0
+  sensor_msgs/SetCameraInfo: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/sensor_msgs/srv/SetCameraInfo.srv
+    name: sensor_msgs/SetCameraInfo
+    package: sensor_msgs
+    source: package_modeler
+    spec: "\n# This service requests that a camera stores the given CameraInfo \n\
+      # as that camera's calibration information.\n#\n# The width and height in the\
+      \ camera_info field should match what the\n# camera is currently outputting\
+      \ on its camera_info topic, and the camera\n# will assume that the region of\
+      \ the imager that is being referred to is\n# the region that the camera is currently\
+      \ capturing.\n\nsensor_msgs/CameraInfo camera_info # The camera_info to store\n\
+      ---\nbool success          # True if the call succeeded\nstring status_message\
+      \ # Used to give details about success\n"
+    version: 0
+  std_srvs/Empty: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/std_srvs/srv/Empty.srv
+    name: std_srvs/Empty
+    package: std_srvs
+    source: package_modeler
+    spec: '
+
+      ---'
+    version: 0
+  std_srvs/SetBool: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/std_srvs/srv/SetBool.srv
+    name: std_srvs/SetBool
+    package: std_srvs
+    source: package_modeler
+    spec: '
+
+      bool data # e.g. for hardware enabling / disabling
+
+      ---
+
+      bool success   # indicate successful run of triggered service
+
+      string message # informational, e.g. for error messages
+
+      '
+    version: 0
+  std_srvs/Trigger: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/std_srvs/srv/Trigger.srv
+    name: std_srvs/Trigger
+    package: std_srvs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      bool success   # indicate successful run of triggered service
+
+      string message # informational, e.g. for error messages
+
+      '
+    version: 0
+  tf/FrameGraph: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/tf/srv/FrameGraph.srv
+    name: tf/FrameGraph
+    package: tf
+    source: package_modeler
+    spec: '
+
+      ---
+
+      string dot_graph
+
+      '
+    version: 0
+  tf2_msgs/FrameGraph: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/tf2_msgs/srv/FrameGraph.srv
+    name: tf2_msgs/FrameGraph
+    package: tf2_msgs
+    source: package_modeler
+    spec: '
+
+      ---
+
+      string frame_yaml
+
+      '
+    version: 0
+  topic_tools/DemuxAdd: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/DemuxAdd.srv
+    name: topic_tools/DemuxAdd
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      string topic
+
+      ---
+
+      '
+    version: 0
+  topic_tools/DemuxDelete: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/DemuxDelete.srv
+    name: topic_tools/DemuxDelete
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      string topic
+
+      ---
+
+
+      '
+    version: 0
+  topic_tools/DemuxList: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/DemuxList.srv
+    name: topic_tools/DemuxList
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      ---
+
+      string[] topics
+
+      '
+    version: 0
+  topic_tools/DemuxSelect: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/DemuxSelect.srv
+    name: topic_tools/DemuxSelect
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      string topic
+
+      ---
+
+      string prev_topic
+
+      '
+    version: 0
+  topic_tools/MuxAdd: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/MuxAdd.srv
+    name: topic_tools/MuxAdd
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      string topic
+
+      ---
+
+      '
+    version: 0
+  topic_tools/MuxDelete: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/MuxDelete.srv
+    name: topic_tools/MuxDelete
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      string topic
+
+      ---
+
+
+      '
+    version: 0
+  topic_tools/MuxList: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/MuxList.srv
+    name: topic_tools/MuxList
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      ---
+
+      string[] topics
+
+      '
+    version: 0
+  topic_tools/MuxSelect: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/topic_tools/srv/MuxSelect.srv
+    name: topic_tools/MuxSelect
+    package: topic_tools
+    source: package_modeler
+    spec: '
+
+      string topic
+
+      ---
+
+      string prev_topic
+
+      '
+    version: 0
+  turtlesim/Kill: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/turtlesim/srv/Kill.srv
+    name: turtlesim/Kill
+    package: turtlesim
+    source: package_modeler
+    spec: '
+
+      string name
+
+      ---'
+    version: 0
+  turtlesim/SetPen: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/turtlesim/srv/SetPen.srv
+    name: turtlesim/SetPen
+    package: turtlesim
+    source: package_modeler
+    spec: '
+
+      uint8 r
+
+      uint8 g
+
+      uint8 b
+
+      uint8 width
+
+      uint8 off
+
+      ---
+
+      '
+    version: 0
+  turtlesim/Spawn: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/turtlesim/srv/Spawn.srv
+    name: turtlesim/Spawn
+    package: turtlesim
+    source: package_modeler
+    spec: '
+
+      float32 x
+
+      float32 y
+
+      float32 theta
+
+      string name # Optional.  A unique name will be created and returned if this
+      is empty
+
+      ---
+
+      string name'
+    version: 0
+  turtlesim/TeleportAbsolute: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/turtlesim/srv/TeleportAbsolute.srv
+    name: turtlesim/TeleportAbsolute
+    package: turtlesim
+    source: package_modeler
+    spec: '
+
+      float32 x
+
+      float32 y
+
+      float32 theta
+
+      ---
+
+      '
+    version: 0
+  turtlesim/TeleportRelative: !TypeSpecification
+    construct_type: srv
+    file_path: /opt/ros/melodic/share/turtlesim/srv/TeleportRelative.srv
+    name: turtlesim/TeleportRelative
+    package: turtlesim
+    source: package_modeler
+    spec: '
+
+      float32 linear
+
+      float32 angular
+
+      ---
+
+      '
+    version: 0

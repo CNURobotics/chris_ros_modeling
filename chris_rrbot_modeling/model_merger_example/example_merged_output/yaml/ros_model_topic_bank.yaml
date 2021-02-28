@@ -1,0 +1,258 @@
+!TopicBank
+names_to_metamodels:
+  /clock: !Topic
+    construct_type: rosgraph_msgs/Clock
+    name: /clock
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set
+      /gazebo: null
+      /gazebo_gui: null
+      /robot_state_publisher: null
+      /rrbot/controller_spawner: null
+      /rrbot_control_action_19653_1598754066562: null
+      /rrbot_rqt: null
+    version: 0
+  /gazebo/link_states: !Topic
+    construct_type: gazebo_msgs/LinkStates
+    name: /gazebo/link_states
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /gazebo/model_states: !Topic
+    construct_type: gazebo_msgs/ModelStates
+    name: /gazebo/model_states
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /gazebo/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /gazebo/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /gazebo/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /gazebo/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /gazebo/set_link_state: !Topic
+    construct_type: gazebo_msgs/LinkState
+    name: /gazebo/set_link_state
+    publisher_node_names: !!set {}
+    source: ros_snapshot
+    subscriber_node_names: !!set
+      /gazebo: null
+    version: 0
+  /gazebo/set_model_state: !Topic
+    construct_type: gazebo_msgs/ModelState
+    name: /gazebo/set_model_state
+    publisher_node_names: !!set {}
+    source: ros_snapshot
+    subscriber_node_names: !!set
+      /gazebo: null
+    version: 0
+  /rrbot/camera1/camera_info: !Topic
+    construct_type: sensor_msgs/CameraInfo
+    name: /rrbot/camera1/camera_info
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw: !Topic
+    construct_type: sensor_msgs/Image
+    name: /rrbot/camera1/image_raw
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/compressed: !Topic
+    construct_type: sensor_msgs/CompressedImage
+    name: /rrbot/camera1/image_raw/compressed
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/compressed/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /rrbot/camera1/image_raw/compressed/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/compressed/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /rrbot/camera1/image_raw/compressed/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/compressedDepth: !Topic
+    construct_type: sensor_msgs/CompressedImage
+    name: /rrbot/camera1/image_raw/compressedDepth
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/compressedDepth/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /rrbot/camera1/image_raw/compressedDepth/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/compressedDepth/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /rrbot/camera1/image_raw/compressedDepth/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/theora: !Topic
+    construct_type: theora_image_transport/Packet
+    name: /rrbot/camera1/image_raw/theora
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/theora/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /rrbot/camera1/image_raw/theora/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/image_raw/theora/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /rrbot/camera1/image_raw/theora/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /rrbot/camera1/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/camera1/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /rrbot/camera1/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/joint1_position_controller/command: !Topic
+    construct_type: std_msgs/Float64
+    name: /rrbot/joint1_position_controller/command
+    publisher_node_names: !!set
+      /rrbot_rqt: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/joint_states: !Topic
+    construct_type: sensor_msgs/JointState
+    name: /rrbot/joint_states
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set
+      /robot_state_publisher: null
+    version: 0
+  /rrbot/laser/scan: !Topic
+    construct_type: sensor_msgs/LaserScan
+    name: /rrbot/laser/scan
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/position_controller/command: !Topic
+    construct_type: trajectory_msgs/JointTrajectory
+    name: /rrbot/position_controller/command
+    publisher_node_names: !!set {}
+    source: ros_snapshot
+    subscriber_node_names: !!set
+      /gazebo: null
+    version: 0
+  /rrbot/position_controller/gains/joint1/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /rrbot/position_controller/gains/joint1/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/position_controller/gains/joint1/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /rrbot/position_controller/gains/joint1/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/position_controller/gains/joint2/parameter_descriptions: !Topic
+    construct_type: dynamic_reconfigure/ConfigDescription
+    name: /rrbot/position_controller/gains/joint2/parameter_descriptions
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/position_controller/gains/joint2/parameter_updates: !Topic
+    construct_type: dynamic_reconfigure/Config
+    name: /rrbot/position_controller/gains/joint2/parameter_updates
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /rrbot/position_controller/state: !Topic
+    construct_type: control_msgs/JointTrajectoryControllerState
+    name: /rrbot/position_controller/state
+    publisher_node_names: !!set
+      /gazebo: null
+    source: ros_snapshot
+    subscriber_node_names: !!set
+      /rrbot_rqt: null
+    version: 0
+  /tf: !Topic
+    construct_type: tf2_msgs/TFMessage
+    name: /tf
+    publisher_node_names: !!set
+      /robot_state_publisher: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
+  /tf_static: !Topic
+    construct_type: tf2_msgs/TFMessage
+    name: /tf_static
+    publisher_node_names: !!set
+      /robot_state_publisher: null
+    source: ros_snapshot
+    subscriber_node_names: !!set {}
+    version: 0
